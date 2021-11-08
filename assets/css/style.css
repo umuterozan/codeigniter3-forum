@@ -3,7 +3,49 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  /*
+  /*header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #1f419b;
+        padding: 30px 10%;
+
+        img {
+            cursor: pointer;
+            margin-right: auto;
+        }
+
+        a {
+            text-decoration: none;
+            margin-right: auto;
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                padding: 0 20px;
+                text-decoration: none;
+
+                :hover {
+                    background: yellow;
+                    color: white;
+                }
+
+                a {
+                    transition: all 0.3s ease 0s;
+                    color: white;
+
+                    :hover {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    
     nav {
         background: #1f419b;
         text-align: center;
@@ -42,6 +84,10 @@
 }
 
 * header {
+  background: #1f419b;
+}
+
+* header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,43 +97,19 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #1f419b;
-  padding: 30px 10%;
 }
 
-* header img {
-  cursor: pointer;
-  margin-right: auto;
-}
-
-* header a {
-  text-decoration: none;
-  margin-right: auto;
-  color: white;
-}
-
-* header nav ul {
+* header .header-container ul {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #bcdef5;
 }
 
-* header nav ul li {
-  display: inline-block;
-  padding: 0 20px;
+* header .header-container a {
   text-decoration: none;
-}
-
-* header nav ul li :hover {
-  background: yellow;
-  color: white;
-}
-
-* header nav ul li a {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  color: white;
-}
-
-* header nav ul li a :hover {
-  color: white;
+  color: #bcdef5;
+  font-family: Arial, Helvetica, sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
