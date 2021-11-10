@@ -61,4 +61,9 @@
   text-decoration: none;
   color: #bcdef5;
 }
+
+* section h3 {
+  padding-top: 15px;
+  font-size: 24px;
+}
 /*# sourceMappingURL=style.css.map */
