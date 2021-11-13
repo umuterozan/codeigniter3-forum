@@ -55,8 +55,200 @@
 
     section {
         h3 {
-            padding-top: 15px;
+            padding-top: 30px;
+            padding-bottom: 5px;
             font-size: 24px;
+        }
+
+        .block-container {
+            border-width: 1px;
+            border-style: solid;
+            border-top-color: #dfdfdf;
+            border-right-color: #d8d8d8;
+            border-bottom-color: #cbcbcb;
+            border-left-color: #d8d8d8;
+            border-radius: 4px;
+
+            .block-header {
+                margin: 0;
+                padding: 6px 10px;
+                font-weight: 400;
+                font-size: 20px;
+                background: #1f419b;
+                border-bottom: 1px solid #dfdfdf;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+
+            .block-body {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+            
+            .node-body {
+                display: table;
+                table-layout: fixed;
+                width: 100%;
+
+                .node-icon {
+                    display: table-cell;
+                    vertical-align: middle;
+                    text-align: center;
+                    width: 46px;
+                    padding: 10px 0 10px 10px;
+
+                    i {
+                        display: block;
+                        line-height: 1.125;
+                        font-size: 32px;
+                    }
+                }
+
+                .node-main {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 10px;
+
+                    .node-title {
+                        margin: 0;
+                        padding: 0;
+                        font-size: 19px;
+                        font-weight: 400;
+                        
+                        a {
+                            color: #2577b1;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+
+                .node-stats {
+                    display: table-cell;
+                    width: 140px;
+                    vertical-align: middle;
+                    text-align: center;
+                    padding: 10px 0;
+                }
+
+                .node-stats > dl.pairs.pairs-rows:first-child {
+                    padding-left: 0;
+                }
+                
+                .node-stats > dl.pairs.pairs-rows {
+                    width: 50%;
+                    float: left;
+                    margin: 0;
+                    padding: 0 3px;
+                }
+
+                .pairs.pairs-rows > dt {
+                    display: table-row;
+                    font-size: 80%;
+                }
+
+                .pairs > dt {
+                    padding: 0;
+                    margin: 0;
+                    color: #8c8c8c;
+                }
+
+                .node-stats > dl.pairs.pairs-rows:last-child {
+                    padding-right: 0;
+                }
+
+                .pairs.pairs-rows > dd {
+                    display: table-row;
+                }
+
+                .pairs > dd {
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .node-extra {
+                    display: table-cell;
+                    vertical-align: middle;
+                    width: 280px;
+                    padding: 10px;
+                    font-size: 13px;
+
+                    .node-extra-icon {
+                        padding-right: 10px;
+                        float: left;
+
+                        .avatar {
+                            width: 36px;
+                            height: 36px;
+                            font-size: 22px;
+                            /* .avatar */
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 50%;
+                            vertical-align: top;
+                            overflow: hidden;
+                        }
+                    }
+
+                    .node-extra-row {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        word-wrap: normal;
+                        text-overflow: ellipsis;
+                        color: #8c8c8c;
+
+                        a {
+                            color: #2577b1;
+                            text-decoration: none;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+
+                        .listInline {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        .listInline > li {
+                            display: inline;
+                            margin: 0;
+                            padding: 0;
+                        }
+
+                        ul {
+                            display: block;
+                            margin-block-start: 1em;
+                            margin-block-end: 1em;
+                            margin-inline-start: 0px;
+                            margin-inline-end: 0px;
+                            padding-inline-start: 40px;
+
+                            .u-dt[title] {
+                                border: none;
+                                text-decoration: none;
+                            }
+
+                            [dir=auto] {
+                                text-align: left;
+                            }
+
+                            .node-extra-user a {
+                                color: #2577b1;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
