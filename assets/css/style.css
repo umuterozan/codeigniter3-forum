@@ -81,6 +81,7 @@
 * section .block-container .block-header {
   margin: 0;
   padding: 6px 10px;
+  border-radius: 4px 4px 0 0;
   font-weight: 400;
   font-size: 20px;
   background: #1f419b;
@@ -99,6 +100,7 @@
 }
 
 * section .block-container .node-body {
+  border-bottom: 1px solid #e2e2e2;
   display: table;
   table-layout: fixed;
   width: 100%;
