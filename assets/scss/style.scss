@@ -57,7 +57,6 @@
 
     section {
         h3 {
-            padding-top: 30px;
             padding-bottom: 5px;
             font-size: 24px;
         }
@@ -255,4 +254,85 @@
             }
         }
     }
+
+    /*footer {
+        font-size: 13px;
+        color: #edf6fd;
+        background: #152c68;
+        display: block;
+        a {
+            color: #bcdef5;
+        }
+
+        .footer-inner {
+            padding-left: 10px;
+            padding-right: 10px;
+            max-width: 1300px;
+            padding: 0 10px;
+            margin: 0 auto;
+            padding-top: 6px;
+            padding-bottom: 10px;
+
+            .footer-row {
+                margin-bottom: -10px;
+
+                .footer-row-main {
+                    float: left;
+                    margin-bottom: 10px;
+
+                    .footer-linkList {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        i {
+                            display: inline-block;
+                            font-style: normal;
+                            font-variant: normal;
+                            text-rendering: auto;
+                            line-height: 1;
+                            position: relative;
+                            font-weight: 400;
+                        }
+
+                        .footer-linkList>li:last-child {
+                            margin-right: 0;
+
+                            .footer-linkList>li a {
+                                padding: 2px 4px;
+                                border-radius: 2px;
+                            }
+                        }
+                    }
+                }
+
+                .footer-row-opposite {
+                    float: right;
+                    margin-bottom: 10px;
+
+                    .footer-linkList>li {
+                        float: left;
+                        margin-right: 0.5em;
+                    }
+                }
+            }
+
+            .footer-copyright {
+                margin-top: 20px;
+                text-align: center;
+                font-size: 11px;
+
+                a {
+                    text-decoration-line: inherit;
+                    color: inherit;
+                    sup {
+                        top: -0.5em;
+                        font-size: 75%;
+                        line-height: 0;
+                        position: relative;
+                        vertical-align: baseline;
+                    }
+                }
+            }
+        }
+    }*/
 }
