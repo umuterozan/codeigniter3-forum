@@ -10,6 +10,9 @@
   background: #1f419b;
   padding-top: 10px;
   padding-bottom: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
 * header .header-container {
