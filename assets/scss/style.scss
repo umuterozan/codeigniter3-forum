@@ -3,6 +3,9 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    body {
+        background: #ececec;
+    }
 
     header {
         background: #1f419b;
@@ -31,6 +34,7 @@
 
                 &:hover {
                     background: rgba($color: #1b3885, $alpha: 0.9S);
+                    transition: all 0.1s ease 0s;
                 }
             }
 
@@ -62,6 +66,7 @@
         }
 
         .block-container {
+            background: #fefefe;
             border-width: 1px;
             border-style: solid;
             border-top-color: #dfdfdf;
@@ -81,7 +86,7 @@
 
                 a {
                     text-decoration: none;
-                    color: white;
+                    color: #edf6fd;
                 }
             }
 
@@ -250,6 +255,57 @@
                             }
                         }
                     }
+                }
+            }
+        }
+    }
+
+    footer {
+        background: #152c68;
+        padding: 6.5px 0;
+
+        .footer-inner {
+            color: #edf6fd;
+            font-size: 13px;
+            i, a {
+            color: #edf6fd;
+            list-style: none;
+            text-decoration: none;
+            }
+
+            .footer-row {
+                display: flex;
+                justify-content: space-between;
+
+                .footer-row-opposite {
+                    display: flex;
+                    justify-content: flex-end;
+                    a {
+                        padding: 3.5px;
+                        margin: 0 5px;
+                        &:hover {
+                            border-radius: 3.5px;
+                            background: rgba($color: #BCDEF5, $alpha: 0.1S);
+                            transition: all 0.1s ease 0s;
+                        }
+                    }
+                }
+            }
+
+            .footer-copyright {
+                color: #edf6fd;
+                margin-top: 20px;
+                text-align: center;
+                font-size: 11px;
+                a:hover {
+                    text-decoration: underline;
+                }
+                sup {
+                    top: -0.5em;
+                    font-size: 75%;
+                    line-height: 0;
+                    position: relative;
+                    vertical-align: baseline;
                 }
             }
         }

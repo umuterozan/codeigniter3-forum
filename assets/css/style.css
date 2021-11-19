@@ -86,6 +86,10 @@
     }*/
 }
 
+* body {
+  background: #ececec;
+}
+
 * header {
   background: #1f419b;
   padding-top: 10px;
@@ -124,6 +128,8 @@
 
 * header .header-container .right-items-navbar a:hover {
   background: rgba(27, 56, 133, 0.9);
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
 }
 
 * header .header-container img {
@@ -151,6 +157,7 @@
 }
 
 * section .block-container {
+  background: #fefefe;
   border-width: 1px;
   border-style: solid;
   border-top-color: #dfdfdf;
@@ -172,7 +179,7 @@
 
 * section .block-container .block-header a {
   text-decoration: none;
-  color: white;
+  color: #edf6fd;
 }
 
 * section .block-container .block-body {
@@ -354,5 +361,70 @@
 * section .block-container .node-body .node-extra .node-extra-row ul .node-extra-user a {
   color: #2577b1;
   text-decoration: none;
+}
+
+* footer {
+  background: #152c68;
+  padding: 6.5px 0;
+}
+
+* footer .footer-inner {
+  color: #edf6fd;
+  font-size: 13px;
+}
+
+* footer .footer-inner i, * footer .footer-inner a {
+  color: #edf6fd;
+  list-style: none;
+  text-decoration: none;
+}
+
+* footer .footer-inner .footer-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+* footer .footer-inner .footer-row .footer-row-opposite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+* footer .footer-inner .footer-row .footer-row-opposite a {
+  padding: 3.5px;
+  margin: 0 5px;
+}
+
+* footer .footer-inner .footer-row .footer-row-opposite a:hover {
+  border-radius: 3.5px;
+  background: rgba(188, 222, 245, 0.1);
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+
+* footer .footer-inner .footer-copyright {
+  color: #edf6fd;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 11px;
+}
+
+* footer .footer-inner .footer-copyright a:hover {
+  text-decoration: underline;
+}
+
+* footer .footer-inner .footer-copyright sup {
+  top: -0.5em;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 /*# sourceMappingURL=style.css.map */
