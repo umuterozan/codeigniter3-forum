@@ -22,18 +22,90 @@
                 <div class="right-items-navbar">
                     <ul>
                         <li>
-                            <a href="#" style="border-right: 1px solid #1d3a87;">Giriş Yap</a>
+                            <!-- Giriş Yap Modal Trigger -->
+                            <a href="" style="border-right: 1px solid #1d3a87;" data-bs-toggle="modal" data-bs-target="#giris_yapModal">Giriş Yap</a>                                                               
                         </li>
                         <li>
-                            <a href="#">Kayıt Ol</a>
+                            <!--Kayıt Ol Modal Trigger -->
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#kayit_olModal">Kayıt Ol</a>                        
                         </li>
-                    </ul>
+                    </ul>                    
                 </div>
             </div>
         </div>
     </header>
     <br>
     <section>
+        <!-- Giriş Yap Modal -->
+        <div class="modal fade" id="giris_yapModal" tabindex="-1" aria-labelledby="giris_yapModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="giris_yapModalLabel">Giriş Yap</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="giris_yapInputEmail" class="form-label">E-posta adresiniz:</label>
+                                <input type="email" class="form-control" id="giris_yapInputEmail" name="giris_yapInputEmail" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text">Kişisel verilerinizi asla başkalarıyla paylaşmayız.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="giris_yapInputPassword" class="form-label">Parola:</label>
+                                <input type="password" class="form-control" id="giris_yapInputPassword" name="giris_yapInputPassword" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="giris_yapCheck">
+                                <label class="form-check-label" for="giris_yapCheck">Beni Hatırla</label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-primary">Giriş Yap</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        <!-- Giriş Yap Modal End -->
+        <!-- Kayıt Ol Modal -->
+        <div class="modal fade" id="kayit_olModal" tabindex="-1" aria-labelledby="kayit_olModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="kayit_olModalLabel">Kayıt Ol</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="kayit_olInputNick" class="form-label">Kullanıcı adı:</label>
+                                <input type="text" class="form-control" id="kayit_olInputNick" name="kayit_olInputNick" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text">Forum kullanıcı adınıza özenle karar verin. Kullanıcıları rahatsız edebilecek, küfür, hakaret vb. ifadeler barındıran kullanıcı adları forumdan süresiz uzaklaştırılacaktır.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kayit_olInputEmail" class="form-label">E-posta adresiniz:</label>
+                                <input type="email" class="form-control" id="kayit_olInputEmail" name="kayit_olInputEmail" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="kayit_olInputPassword" class="form-label">Parola:</label>
+                                <input type="password" class="form-control" id="kayit_olInputPassword" name="kayit_olInputPassword" required>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="kayit_olCheck">
+                                <label class="form-check-label" for="kayit_olCheck">Kullanım Koşulları ve Gizlilik Politikasını okudum, kabul ediyorum.</label>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                                <button type="button" class="btn btn-primary">Kayıt Ol</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Kayıt Ol Modal End -->
         <div class="container">
             <h3>Teknoloji Forumu</h3>
             <div class="block-container">
@@ -626,5 +698,6 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
