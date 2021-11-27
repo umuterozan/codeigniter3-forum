@@ -71,6 +71,10 @@
   color: #bcdef5;
 }
 
+* section {
+  min-height: calc(100vh - 70px);
+}
+
 * section h3 {
   padding-bottom: 5px;
   font-size: 24px;
