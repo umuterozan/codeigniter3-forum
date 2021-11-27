@@ -105,6 +105,62 @@
                 list-style: none;
                 margin: 0;
                 padding: 0;
+
+                .structItemContainer {
+                    border-collapse: collapse;
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+
+                    .structItem {
+                        display: table;
+                        table-layout: fixed;
+                        border-collapse: collapse;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+
+                        .structItem-cell.structItem-cell--icon {
+                            width: 52px;
+                            position: relative;
+                        }
+
+                        .structItem-cell {
+                            display: table-cell;
+                            vertical-align: top;
+                            padding: 10px 8px;
+                        }
+
+                        .structItem-iconContainer {
+                            position: relative;
+
+                            .avatar.avatar--default.avatar--default.dynamic {
+                                font-weight: normal;
+                                text-align: center;
+                                text-decoration: none;
+                                line-height: 1;
+                            }
+                            .avatar.avatar--s {
+                                width: 48px;
+                                height: 48px;
+                            }
+                            .avatar {
+                                width: 36px;
+                                height: 36px;
+                                font-size: 22px;
+                                /* .avatar */
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                border-radius: 50%;
+                                vertical-align: top;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
             }
             
             .node-body {
@@ -267,6 +323,14 @@
                         }
                     }
                 }
+            }
+
+            .block-bar {
+                padding: 16px;
+                font-size: 13px;
+                color: #2577b1;
+                border-bottom: 1px solid #cbcbcb;
+                background: linear-gradient(0deg, #edf6fd, #f6fafe);
             }
         }
     }

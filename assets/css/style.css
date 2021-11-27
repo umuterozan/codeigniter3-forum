@@ -122,6 +122,70 @@
   padding: 0;
 }
 
+* section .block-container .block-body .structItemContainer {
+  border-collapse: collapse;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+* section .block-container .block-body .structItemContainer .structItem {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--icon {
+  width: 52px;
+  position: relative;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-cell {
+  display: table-cell;
+  vertical-align: top;
+  padding: 10px 8px;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer {
+  position: relative;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--default.avatar--default.dynamic {
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--s {
+  width: 48px;
+  height: 48px;
+}
+
+* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar {
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  /* .avatar */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  vertical-align: top;
+  overflow: hidden;
+}
+
 * section .block-container .node-body {
   border-bottom: 1px solid #e2e2e2;
   display: table;
@@ -295,6 +359,15 @@
 * section .block-container .node-body .node-extra .node-extra-row ul .node-extra-user a {
   color: #2577b1;
   text-decoration: none;
+}
+
+* section .block-container .block-bar {
+  padding: 16px;
+  font-size: 13px;
+  color: #2577b1;
+  border-bottom: 1px solid #cbcbcb;
+  background: -webkit-gradient(linear, left bottom, left top, from(#edf6fd), to(#f6fafe));
+  background: linear-gradient(0deg, #edf6fd, #f6fafe);
 }
 
 * footer {
