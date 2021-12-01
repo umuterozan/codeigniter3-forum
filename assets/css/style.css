@@ -6,11 +6,12 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-* body {
+body {
   background: #ececec;
 }
 
-* header {
+header {
+  z-index: 9999;
   background: #1f419b;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -19,7 +20,7 @@
   top: 0;
 }
 
-* header .header-container {
+header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -31,33 +32,33 @@
           align-items: center;
 }
 
-* header .header-container .left-items-navbar a {
+header .header-container .left-items-navbar a {
   padding: 30px;
   margin-left: 50px;
 }
 
-* header .header-container .left-items-navbar a:hover {
+header .header-container .left-items-navbar a:hover {
   background: rgba(188, 222, 245, 0.1);
   -webkit-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 
-* header .header-container .right-items-navbar a {
+header .header-container .right-items-navbar a {
   padding: 30px 10px;
 }
 
-* header .header-container .right-items-navbar a:hover {
+header .header-container .right-items-navbar a:hover {
   background: rgba(27, 56, 133, 0.9);
   -webkit-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
 }
 
-* header .header-container img {
+header .header-container img {
   width: 200px;
   height: 46.42px;
 }
 
-* header .header-container ul {
+header .header-container ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,21 +67,21 @@
   margin-top: 15px;
 }
 
-* header .header-container a {
+header .header-container a {
   text-decoration: none;
   color: #bcdef5;
 }
 
-* section {
+section {
   min-height: calc(100vh - 70px);
 }
 
-* section h3 {
+section h3 {
   padding-bottom: 5px;
   font-size: 24px;
 }
 
-* section .u-anchorTarget {
+section .u-anchorTarget {
   height: 0;
   width: 0;
   margin-top: -85px;
@@ -90,7 +91,7 @@
   position: absolute;
 }
 
-* section .block-container {
+section .block-container {
   background: #fefefe;
   border-width: 1px;
   border-style: solid;
@@ -101,7 +102,7 @@
   border-radius: 4px;
 }
 
-* section .block-container .block-header {
+section .block-container .block-header {
   margin: 0;
   padding: 6px 10px;
   border-radius: 4px 4px 0 0;
@@ -111,18 +112,18 @@
   border-bottom: 1px solid #dfdfdf;
 }
 
-* section .block-container .block-header a {
+section .block-container .block-header a {
   text-decoration: none;
   color: #edf6fd;
 }
 
-* section .block-container .block-body {
+section .block-container .block-body {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-* section .block-container .block-body .structItemContainer {
+section .block-container .block-body .structItemContainer {
   border-collapse: collapse;
   list-style: none;
   margin: 0;
@@ -130,7 +131,7 @@
   width: 100%;
 }
 
-* section .block-container .block-body .structItemContainer .structItem {
+section .block-container .block-body .structItemContainer .structItem {
   display: table;
   table-layout: fixed;
   border-collapse: collapse;
@@ -140,34 +141,50 @@
   width: 100%;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--icon {
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--icon {
   width: 52px;
   position: relative;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-cell {
+section .block-container .block-body .structItemContainer .structItem .structItem-cell {
   display: table-cell;
   vertical-align: top;
   padding: 10px 8px;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer {
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer {
   position: relative;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--default.avatar--default.dynamic {
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--default.avatar--default.dynamic {
   font-weight: normal;
   text-align: center;
   text-decoration: none;
   line-height: 1;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--s {
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--s {
   width: 48px;
   height: 48px;
 }
 
-* section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar {
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .structItem-iconContainer .avatar.avatar--xxs {
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .structItem-iconContainer .avatar {
+  width: 36px;
+  height: 36px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar.avatar--xxs {
+  width: 24px;
+  height: 24px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-iconContainer .avatar {
   width: 36px;
   height: 36px;
   font-size: 22px;
@@ -184,16 +201,146 @@
   border-radius: 50%;
   vertical-align: top;
   overflow: hidden;
+  text-decoration: none;
 }
 
-* section .block-container .node-body {
+section .block-container .block-body .structItemContainer .structItem .structItem-title {
+  font-size: 17px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-title a {
+  text-decoration: none;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-title a:hover {
+  text-decoration: underline;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-minor {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-minor a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-minor .structItem-parts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-minor .structItem-parts > li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-minor .structItem-parts > li:nth-child(even) {
+  color: #505050;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--meta {
+  width: 135px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--meta .pairs.pairs--justified > dt {
+  float: left;
+  max-width: 100%;
+  margin-right: 6px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--meta .pairs > dt {
+  padding: 0;
+  margin: 0;
+  color: #8c8c8c;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--meta .pairs.pairs--justified > dd {
+  float: right;
+  text-align: right;
+  max-width: 100%;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--meta .pairs > dd {
+  padding: 0;
+  margin: 0;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest {
+  width: 190px;
+  text-align: right;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest a {
+  text-decoration: none;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest a:hover {
+  text-decoration: underline;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest .structItem-minor {
+  font-size: 12px;
+  color: #8c8c8c;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest .structItem-minor a {
+  color: inherit;
+  text-decoration: none;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--latest .structItem-minor a:hover {
+  text-decoration: underline;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--icon.structItem-cell--iconEnd {
+  width: 40px;
+  padding-left: 4px;
+}
+
+section .block-container .block-body .structItemContainer .structItem .structItem-cell.structItem-cell--icon.structItem-cell--iconEnd .structItem-iconContainer {
+  padding-top: 6px;
+}
+
+section .block-container .node-body {
   border-bottom: 1px solid #e2e2e2;
   display: table;
   table-layout: fixed;
   width: 100%;
 }
 
-* section .block-container .node-body .node-icon {
+section .block-container .node-body dt, section .block-container .node-body dd, section .block-container .node-body dl {
+  display: block;
+}
+
+section .block-container .node-body dl {
+  -webkit-margin-before: 1em;
+          margin-block-start: 1em;
+  -webkit-margin-after: 1em;
+          margin-block-end: 1em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
+}
+
+section .block-container .node-body .u-dt[title] {
+  border: none;
+  text-decoration: none;
+}
+
+section .block-container .node-body [dir=auto] {
+  text-align: left;
+}
+
+section .block-container .node-body .node-icon {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -201,35 +348,35 @@
   padding: 10px 0 10px 10px;
 }
 
-* section .block-container .node-body .node-icon i {
+section .block-container .node-body .node-icon i {
   display: block;
   line-height: 1.125;
   font-size: 32px;
 }
 
-* section .block-container .node-body .node-main {
+section .block-container .node-body .node-main {
   display: table-cell;
   vertical-align: middle;
   padding: 10px;
 }
 
-* section .block-container .node-body .node-main .node-title {
+section .block-container .node-body .node-main .node-title {
   margin: 0;
   padding: 0;
   font-size: 19px;
   font-weight: 400;
 }
 
-* section .block-container .node-body .node-main .node-title a {
+section .block-container .node-body .node-main .node-title a {
   color: #2577b1;
   text-decoration: none;
 }
 
-* section .block-container .node-body .node-main .node-title a:hover {
+section .block-container .node-body .node-main .node-title a:hover {
   text-decoration: underline;
 }
 
-* section .block-container .node-body .node-stats {
+section .block-container .node-body .node-stats {
   display: table-cell;
   width: 140px;
   vertical-align: middle;
@@ -237,42 +384,42 @@
   padding: 10px 0;
 }
 
-* section .block-container .node-body .node-stats > dl.pairs.pairs-rows:first-child {
+section .block-container .node-body .node-stats > dl.pairs.pairs-rows:first-child {
   padding-left: 0;
 }
 
-* section .block-container .node-body .node-stats > dl.pairs.pairs-rows {
+section .block-container .node-body .node-stats > dl.pairs.pairs-rows {
   width: 50%;
   float: left;
   margin: 0;
   padding: 0 3px;
 }
 
-* section .block-container .node-body .pairs.pairs-rows > dt {
+section .block-container .node-body .pairs.pairs-rows > dt {
   display: table-row;
   font-size: 80%;
 }
 
-* section .block-container .node-body .pairs > dt {
+section .block-container .node-body .pairs > dt {
   padding: 0;
   margin: 0;
   color: #8c8c8c;
 }
 
-* section .block-container .node-body .node-stats > dl.pairs.pairs-rows:last-child {
+section .block-container .node-body .node-stats > dl.pairs.pairs-rows:last-child {
   padding-right: 0;
 }
 
-* section .block-container .node-body .pairs.pairs-rows > dd {
+section .block-container .node-body .pairs.pairs-rows > dd {
   display: table-row;
 }
 
-* section .block-container .node-body .pairs > dd {
+section .block-container .node-body .pairs > dd {
   padding: 0;
   margin: 0;
 }
 
-* section .block-container .node-body .node-extra {
+section .block-container .node-body .node-extra {
   display: table-cell;
   vertical-align: middle;
   width: 280px;
@@ -280,12 +427,12 @@
   font-size: 13px;
 }
 
-* section .block-container .node-body .node-extra .node-extra-icon {
+section .block-container .node-body .node-extra .node-extra-icon {
   padding-right: 10px;
   float: left;
 }
 
-* section .block-container .node-body .node-extra .node-extra-icon .avatar {
+section .block-container .node-body .node-extra .node-extra-icon .avatar {
   width: 36px;
   height: 36px;
   font-size: 22px;
@@ -302,9 +449,10 @@
   border-radius: 50%;
   vertical-align: top;
   overflow: hidden;
+  text-decoration: none;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row {
+section .block-container .node-body .node-extra .node-extra-row {
   overflow: hidden;
   white-space: nowrap;
   word-wrap: normal;
@@ -312,28 +460,28 @@
   color: #8c8c8c;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row a {
+section .block-container .node-body .node-extra .node-extra-row a {
   color: #2577b1;
   text-decoration: none;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row a:hover {
+section .block-container .node-body .node-extra .node-extra-row a:hover {
   text-decoration: underline;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row .listInline {
+section .block-container .node-body .node-extra .node-extra-row .listInline {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row .listInline > li {
+section .block-container .node-body .node-extra .node-extra-row .listInline > li {
   display: inline;
   margin: 0;
   padding: 0;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row ul {
+section .block-container .node-body .node-extra .node-extra-row ul {
   display: block;
   -webkit-margin-before: 1em;
           margin-block-start: 1em;
@@ -347,21 +495,21 @@
           padding-inline-start: 40px;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row ul .u-dt[title] {
+section .block-container .node-body .node-extra .node-extra-row ul .u-dt[title] {
   border: none;
   text-decoration: none;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row ul [dir=auto] {
+section .block-container .node-body .node-extra .node-extra-row ul [dir=auto] {
   text-align: left;
 }
 
-* section .block-container .node-body .node-extra .node-extra-row ul .node-extra-user a {
+section .block-container .node-body .node-extra .node-extra-row ul .node-extra-user a {
   color: #2577b1;
   text-decoration: none;
 }
 
-* section .block-container .block-bar {
+section .block-container .block-bar {
   padding: 16px;
   font-size: 13px;
   color: #2577b1;
@@ -370,23 +518,23 @@
   background: linear-gradient(0deg, #edf6fd, #f6fafe);
 }
 
-* footer {
+footer {
   background: #152c68;
   padding: 6.5px 0;
 }
 
-* footer .footer-inner {
+footer .footer-inner {
   color: #edf6fd;
   font-size: 13px;
 }
 
-* footer .footer-inner i, * footer .footer-inner a {
+footer .footer-inner i, footer .footer-inner a {
   color: #edf6fd;
   list-style: none;
   text-decoration: none;
 }
 
-* footer .footer-inner .footer-row {
+footer .footer-inner .footer-row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +543,7 @@
           justify-content: space-between;
 }
 
-* footer .footer-inner .footer-row .footer-row-opposite {
+footer .footer-inner .footer-row .footer-row-opposite {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -404,30 +552,30 @@
           justify-content: flex-end;
 }
 
-* footer .footer-inner .footer-row .footer-row-opposite a {
+footer .footer-inner .footer-row .footer-row-opposite a {
   padding: 3.5px;
   margin: 0 5px;
 }
 
-* footer .footer-inner .footer-row .footer-row-opposite a:hover {
+footer .footer-inner .footer-row .footer-row-opposite a:hover {
   border-radius: 3.5px;
   background: rgba(188, 222, 245, 0.1);
   -webkit-transition: all 0.1s ease 0s;
   transition: all 0.1s ease 0s;
 }
 
-* footer .footer-inner .footer-copyright {
+footer .footer-inner .footer-copyright {
   color: #edf6fd;
   margin-top: 20px;
   text-align: center;
   font-size: 11px;
 }
 
-* footer .footer-inner .footer-copyright a:hover {
+footer .footer-inner .footer-copyright a:hover {
   text-decoration: underline;
 }
 
-* footer .footer-inner .footer-copyright sup {
+footer .footer-inner .footer-copyright sup {
   top: -0.5em;
   font-size: 75%;
   line-height: 0;
