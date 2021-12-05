@@ -44,16 +44,29 @@
                         <h5 class="modal-title" id="giris_yapModalLabel">Giriş Yap</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <?php if($this->session->flashdata('success')) : ?>
+                        <div class="alert alert-success d-flex align-items-center" role="alert">
+                            <div>
+                                <?=$this->session->flashdata('success');?>
+                            </div>
+                        </div>
+                        <?php elseif($this->session->flashdata('login_error')) : ?>
+                            <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <div>
+                                <?=$this->session->flashdata('login_error');?>
+                            </div>
+                        </div>
+                    <?php endif;?>
                     <div class="modal-body">
-                        <form>
+                        <form action="<?=base_url('user/login');?>" method="post">
                             <div class="mb-3">
                                 <label for="giris_yapInputEmail" class="form-label">E-posta adresiniz:</label>
-                                <input type="email" class="form-control" id="giris_yapInputEmail" name="giris_yapInputEmail" aria-describedby="emailHelp" required>
+                                <input type="email" class="form-control" id="giris_yapInputEmail" name="email" aria-describedby="emailHelp" required>
                                 <div id="emailHelp" class="form-text">Kişisel verilerinizi asla başkalarıyla paylaşmayız.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="giris_yapInputPassword" class="form-label">Parola:</label>
-                                <input type="password" class="form-control" id="giris_yapInputPassword" name="giris_yapInputPassword" required>
+                                <input type="password" class="form-control" id="giris_yapInputPassword" name="password" required>
                             </div>
                             <div class="mb-3 form-check">
                                 <input type="checkbox" class="form-check-input" id="giris_yapCheck">
@@ -77,28 +90,35 @@
                         <h5 class="modal-title" id="kayit_olModalLabel">Kayıt Ol</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
+                    <?php if($this->session->flashdata('error')) : ?>
+                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                            <div>
+                                <?=$this->session->flashdata('error');?>
+                            </div>
+                        </div>
+                    <?php endif;?>
                     <div class="modal-body">
-                        <form>
+                        <form action="<?=base_url('user/register');?>" method="post">
                             <div class="mb-3">
                                 <label for="kayit_olInputNick" class="form-label">Kullanıcı adı:</label>
-                                <input type="text" class="form-control" id="kayit_olInputNick" name="kayit_olInputNick" aria-describedby="emailHelp" required>
+                                <input type="text" class="form-control" id="kayit_olInputNick" name="username" aria-describedby="emailHelp" required>
                                 <div id="emailHelp" class="form-text">Forum kullanıcı adınıza özenle karar verin. Kullanıcıları rahatsız edebilecek, küfür, hakaret vb. ifadeler barındıran kullanıcı adları forumdan süresiz uzaklaştırılacaktır.</div>
                             </div>
                             <div class="mb-3">
                                 <label for="kayit_olInputEmail" class="form-label">E-posta adresiniz:</label>
-                                <input type="email" class="form-control" id="kayit_olInputEmail" name="kayit_olInputEmail" required>
+                                <input type="email" class="form-control" id="kayit_olInputEmail" name="email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="kayit_olInputPassword" class="form-label">Parola:</label>
-                                <input type="password" class="form-control" id="kayit_olInputPassword" name="kayit_olInputPassword" required>
+                                <input type="password" class="form-control" id="kayit_olInputPassword" name="password" required>
                             </div>
                             <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="kayit_olCheck" required>
+                                <input type="checkbox" class="form-check-input" id="kayit_olCheck" name="checkbox" required>
                                 <label class="form-check-label" for="kayit_olCheck">Kullanım Koşulları ve Gizlilik Politikasını okudum, kabul ediyorum.</label>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
-                                <button type="button" class="btn btn-primary">Kayıt Ol</button>
+                                <button type="submit" class="btn btn-primary">Kayıt Ol</button>
                             </div>
                         </form>
                     </div>
@@ -701,6 +721,22 @@
             </div>
         </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <?php if($this->session->flashdata('error')) : ?>
+        <script>
+            var myModal = new bootstrap.Modal(document.getElementById("kayit_olModal"), {});
+            document.onreadystatechange = function () {
+            myModal.show();
+            };
+        </script>
+    <?php elseif($this->session->flashdata('success') || $this->session->flashdata('login_error')) : ?>
+        <script>
+            var myModal = new bootstrap.Modal(document.getElementById("giris_yapModal"), {});
+            document.onreadystatechange = function () {
+            myModal.show();
+            };
+        </script>
+    <?php endif;?>
 </body>
 </html>
