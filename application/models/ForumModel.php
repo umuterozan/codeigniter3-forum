@@ -8,16 +8,14 @@ class ForumModel extends CI_Model {
     }
 
     public function getCategories(){
-        $categories = $this->db->get_where('categories', array(
+        $alt_categories = $this->db->get_where('categories', array(
             'category_parent' => null
         ));
-        return $categories->result();
+        return $alt_categories->result();
     }
 
-    public function getAltCategories($category_id){
-        $alt_categories = $this->db->get_where('categories', array(
-            'category_parent' => $category_id
-        ));
-        return $alt_categories->result();
+    public function getAltCategories($where){
+        $categories = $this->db->get_where('categories', $where);
+        return $categories->result();
     }
 }

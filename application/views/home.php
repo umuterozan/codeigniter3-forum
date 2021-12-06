@@ -23,14 +23,14 @@
                     <h2 class="block-header">
                         <a href="#donanim"><?=$value->category_name?></a>
                     </h2>
-                    <?php foreach($this->forummodel->getAltCategories($value->category_id) as $key => $value) : ?>
+                    <?php foreach($this->forummodel->getAltCategories(array('category_parent' => $value->category_id)) as $key => $value) : ?>
                         <div class="node-body">
                             <div class="node-icon">
                                 <i class="far fa-comments"></i>
                             </div>
                             <div class="node-main">
                                 <h3 class="node-title">
-                                    <a href="forums/donanim/masaustu-dizustu/"><?=$value->category_name?></a>
+                                    <a href="<?=base_url('forumlar/' . slugify($value->category_name, '-'));?>"><?=$value->category_name?></a>
                                 </h3>
                             </div>
                             <div class="node-stats">

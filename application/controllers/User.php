@@ -43,12 +43,25 @@ class User extends CI_Controller {
                     'user_email' => $this->input->post('email'),
                     'user_password' => $this->input->post('password')
                 );
-                if ($this->user->select_user($user)->num_rows() > 0) {
-                    echo "giriş yaptı";
+                $user_data = $this->user->select_user($user);
+                if ($user_data->num_rows() > 0) {
+                    $user_data = $user_data->row();
+                    $this->session->set_userdata('login', array(
+                        'user_id' => $user_data->user_id,
+                        'user_name' => $user_data->user_name
+                    ));
+                    redirect((base_url()));
                 }
             }
         } else {
             $this->session->set_flashdata('login_error', validation_errors());
+            redirect(base_url());
+        }
+    }
+
+    public function logout() {
+        if ($this->session->has_userdata('login')) {
+            $this->session->unset_userdata('login');
             redirect(base_url());
         }
     }
