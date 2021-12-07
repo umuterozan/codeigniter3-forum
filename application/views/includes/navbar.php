@@ -2,7 +2,7 @@
         <div class="container">
             <div class="header-container">
                 <div class="left-items-navbar">
-                    <img src="<?=base_url('assets/img/xenforo-logo.png');?>" alt="Logo">
+                    <img src="<?=base_url('assets/img/logo.png');?>" alt="Logo">
                     <a href="<?=base_url();?>"><i class="fas fa-home"></i> Anasayfa</a>
                 </div>
                 <div class="right-items-navbar">
