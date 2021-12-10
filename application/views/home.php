@@ -30,7 +30,7 @@
                             </div>
                             <div class="node-main">
                                 <h3 class="node-title">
-                                    <a href="<?=base_url('forumlar/' . slugify($value->category_name, '-'));?>"><?=$value->category_name?></a>
+                                    <a href="<?=base_url('forumlar/' . $value->category_url);?>"><?=$value->category_name?></a>
                                 </h3>
                             </div>
                             <div class="node-stats">
