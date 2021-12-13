@@ -53,3 +53,4 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['forumlar/(:any)'] = 'board/index/$1';
+$route['konular/(:any)'] = 'topic/index/$1';

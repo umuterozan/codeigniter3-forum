@@ -31,7 +31,7 @@
                             </div>
                             <div class="structItem-cell structItem-cell--main">
                                 <div class="structItem-title">
-                                    <a href="#">14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi</a>
+                                    <a href="<?=base_url('konular/14-bilgisayar-hizlandirma-ve-fps-arttirma-yontemi')?>">14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi</a>
                                 </div>
                                 <div class="structItem-minor">
                                     <ul class="structItem-parts">
