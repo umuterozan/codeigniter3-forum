@@ -465,6 +465,90 @@ section {
             background: linear-gradient(0deg, #edf6fd, #f6fafe);
         }
     }
+
+    .p-body {
+        display: flex;
+        align-items: stretch;
+        flex-grow: 1;
+        min-height: 1px;
+
+        .container.p-body-inner {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 1300px;
+            padding: 0 10px;
+            margin: 0 auto;
+        }
+
+        .p-body-header {
+            margin-bottom: 10px;
+
+            .p-title {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                align-items: center;
+                max-width: 100%;
+                margin-bottom: -5px;
+            }
+
+            .p-description {
+                margin: 5px 0 0;
+                padding: 0;
+        
+                .listInline {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        float: left;
+                        i {
+                            color: #8c8c8c;
+                        }
+                        a {
+                            text-decoration: none;
+                            font-size: 13px;
+                            color: #8c8c8c;
+                            &:hover {
+                                text-decoration: underline;
+                            }
+                        }
+                        &:last-child {
+                            margin-left: 3px;
+                        }
+                    }
+
+                    .listInline>li {
+                        display: inline;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    
+                    .u-srOnly {
+                        position: absolute;
+                        height: 1px;
+                        width: 1px;
+                        margin: -1px;
+                        padding: 0;
+                        border: 0;
+                        clip: rect(0 0 0 0);
+                        overflow: hidden;
+                    }
+                }
+            }
+        }
+
+    }
+    .far {
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        line-height: 1;
+        position: relative;
+        font-weight: 400;
+    }
 }
 
 footer {

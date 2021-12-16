@@ -518,6 +518,111 @@ section .block-container .block-bar {
   background: linear-gradient(0deg, #edf6fd, #f6fafe);
 }
 
+section .p-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  min-height: 1px;
+}
+
+section .p-body .container.p-body-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+section .p-body .p-body-header {
+  margin-bottom: 10px;
+}
+
+section .p-body .p-body-header .p-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  max-width: 100%;
+  margin-bottom: -5px;
+}
+
+section .p-body .p-body-header .p-description {
+  margin: 5px 0 0;
+  padding: 0;
+}
+
+section .p-body .p-body-header .p-description .listInline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+section .p-body .p-body-header .p-description .listInline li {
+  float: left;
+}
+
+section .p-body .p-body-header .p-description .listInline li i {
+  color: #8c8c8c;
+}
+
+section .p-body .p-body-header .p-description .listInline li a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #8c8c8c;
+}
+
+section .p-body .p-body-header .p-description .listInline li a:hover {
+  text-decoration: underline;
+}
+
+section .p-body .p-body-header .p-description .listInline li:last-child {
+  margin-left: 3px;
+}
+
+section .p-body .p-body-header .p-description .listInline .listInline > li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+section .p-body .p-body-header .p-description .listInline .u-srOnly {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+section .far {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  position: relative;
+  font-weight: 400;
+}
+
 footer {
   background: #152c68;
   padding: 6.5px 0;

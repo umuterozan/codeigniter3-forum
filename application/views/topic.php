@@ -15,8 +15,29 @@
     <?php $this->load->view('includes/navbar');?>
     <section>
     <?php $this->load->view('includes/modal');?>
-        <div class="container">
-            <h3>14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi</h3>
+        <div class="p-body">
+            <div class="container p-body-inner">
+                <div class="p-body-header">
+                    <div class="p-title">
+                        <h3 class="p-title-value">14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi</h3>
+                    </div>
+                    <div class="p-description">
+                        <ul class="listInline listInline--bullet">
+                            <li>
+                                <i class="fa--xf far fa-user"></i>
+                                <span class="u-srOnly"></span>
+                                <a href="#" class="username  u-concealed" dir="auto">Teknonely (APK Meydanı)</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;color: #8c8c8c;"></i>
+                                <i class="fa--xf far fa-clock"></i>
+                                <span class="u-srOnly"></span>
+                                <a href="#" class="u-concealed"><time class="u-dt" dir="auto" datetime="2020-12-06T15:24:40+0000" data-time="1607268280" data-date-string="6 Ara 2020" data-time-string="15:24" title="6 Ara 2020, Saat: 15:24">6 Ara 2020</time></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <br>
