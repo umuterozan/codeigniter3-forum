@@ -79,6 +79,11 @@
                     </div>
                 </div>
             </div>
+            <div class="block-outer block-outer--after">
+                <div class="block-outer-opposite">
+                    <a href="#" class="button--link button--wrap button" data-xf-click="overlay"><span class="button-text">Cevap yazmak için giriş yapmalı veya kayıt olmalısınız.</span></a>
+                </div>
+            </div>
         </div>
     </section>
     <br>
