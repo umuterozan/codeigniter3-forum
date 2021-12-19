@@ -37,7 +37,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="p-body-main"> <!-- buradan itibaren css yazılacak -->
+                <div class="p-body-main">
                     <div class="p-body-contentCol"></div>
                     <div class="p-body-sidebarCol"></div>
                     <div class="p-body-content">
@@ -51,7 +51,7 @@
                                             <span class="u-anchorTarget"></span>
                                             <div class="message-inner">
                                                 <div class="message-cell message-cell--user">
-                                                    <section itemscope itemtype="https://schema.org/Person" class="message-user">
+                                                    <div itemscope itemtype="https://schema.org/Person" class="message-user">
                                                         <div class="message-avatar">
                                                             <div class="message-avatar-wrapper">
                                                                 <a href="#" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e"><span class="avatar-u134-m" role="img" aria-label="Teknonely (APK Meydanı)">T</span></a>
@@ -59,11 +59,11 @@
                                                         </div>
                                                         <div class="message-userDetails">
                                                             <h4 class="message-name">
-                                                            <a href="#" class="username" dir="auto" itemprop="name">Teknonely (APK Meydanı)</a>
+                                                                <a href="#" class="username" dir="auto" itemprop="name">Teknonely (APK Meydanı)</a>
                                                             </h4>
                                                         </div>
                                                         <span class="message-userArrow"></span>
-                                                    </section>
+                                                    </div>
                                                 </div>
                                                 <div class="message-cell message-cell-main">
                                                     <div class="message-main">
@@ -72,10 +72,6 @@
                                                                 <li class="u-concealed">
                                                                     <a href="#" rel="nofollow"><time class="u-dt" dir="auto" datetime="2020-12-06T15:24:40+0000" data-time="1607268280" data-date-string="6 Ara 2020" data-time-string="15:24" title="6 Ara 2020, Saat: 15:24" itemprop="datePublished">6 Ara 2020</time></a>
                                                                 </li>
-                                                            </ul>
-                                                            <ul class="message-attribution-opposite message-attribution-opposite--list">
-                                                                <li><a href="#" class="message-attribution-gadget"><i class="fa--xf far fa-share-alt" aria-hidden="true"></i></a></li>
-                                                                <li><a href="#">#1</a></li>
                                                             </ul>
                                                         </div>
                                                         <div class="message-content">
