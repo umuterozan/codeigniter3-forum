@@ -26,7 +26,7 @@
                     <?php foreach($this->forummodel->getAltCategories(array('category_parent' => $value->category_id)) as $key => $value) : ?>
                         <div class="node-body">
                             <div class="node-icon">
-                                <i class="far fa-comments"></i>
+                                <i class="far fa-comments" style="opacity:1;color: #f9c479;"></i>
                             </div>
                             <div class="node-main">
                                 <h3 class="node-title">
@@ -45,7 +45,7 @@
                             </div>
                             <div class="node-extra">
                                 <div class="node-extra-icon">
-                                    <a href="#" class="avatar" style="background-color: #ebebad; color: #b8b82e">
+                                    <a href="#" class="avatar avatar--xs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
                                         <span>T</span> 
                                     </a>
                                 </div>
