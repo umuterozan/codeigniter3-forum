@@ -1,4 +1,4 @@
-    <header>
+<header>
         <div class="container">
             <div class="header-container">
                 <div class="left-items-navbar">

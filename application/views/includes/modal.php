@@ -1,4 +1,4 @@
-    <!-- Giriş Yap Modal -->
+<!-- Giriş Yap Modal -->
     <div class="modal fade" id="giris_yapModal" tabindex="-1" aria-labelledby="giris_yapModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
