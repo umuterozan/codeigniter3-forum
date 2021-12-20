@@ -65,13 +65,13 @@
                             <div class="structItem-cell structItem-cell--latest">
                                 <a href="#" rel="nofollow"><time class="structItem-latestDate u-dt" dir="auto" datetime="2020-12-06T15:24:40+0000" data-time="1607268280" data-date-string="6 Ara 2020" data-time-string="15:24" title="6 Ara 2020, Saat: 15:24">6 Ara 2020</time></a>
                                 <div class="structItem-minor">
-                                    <a href="#" class="username" dir="auto" itemprop="name" data-user-id="134" data-xf-init="member-tooltip" id="js-XFUniqueId4">Teknonely (APK Meydanı)</a>
+                                    <a href="#" class="username" dir="auto" itemprop="name">Teknonely (APK Meydanı)</a>
                                 </div>
                             </div>
                             <div class="structItem-cell structItem-cell--icon structItem-cell--iconEnd">
                                 <div class="structItem-iconContainer">
                                     <a href="#" class="avatar avatar--xxs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
-                                        <span class="avatar-u134-s" role="img" aria-label="Teknonely (APK Meydanı)">T</span> 
+                                        <span class="avatar-u134-s" role="img" aria-label="Teknonely (APK Meydanı)" style="font-size: 14px;">T</span> 
                                     </a>
                                 </div>
                             </div>
