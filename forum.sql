@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 12 Ara 2021, 18:41:29
+-- Üretim Zamanı: 21 Ara 2021, 12:12:30
 -- Sunucu sürümü: 10.4.21-MariaDB
 -- PHP Sürümü: 8.0.10
 
@@ -24,21 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `categories`
+-- Tablo için tablo yapısı `boards`
 --
 
-CREATE TABLE `categories` (
-  `category_id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL,
-  `category_parent` varchar(255) DEFAULT NULL,
-  `category_url` varchar(255) NOT NULL
+CREATE TABLE `boards` (
+  `board_id` int(11) NOT NULL,
+  `board_name` varchar(255) NOT NULL,
+  `board_parent` varchar(255) DEFAULT NULL,
+  `board_url` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Tablo döküm verisi `categories`
+-- Tablo döküm verisi `boards`
 --
 
-INSERT INTO `categories` (`category_id`, `category_name`, `category_parent`, `category_url`) VALUES
+INSERT INTO `boards` (`board_id`, `board_name`, `board_parent`, `board_url`) VALUES
 (1, 'Donanım', NULL, 'donanim'),
 (2, 'Yazılım', NULL, 'yazilim'),
 (3, 'Diğer Teknolojiler', NULL, 'diger-teknolojiler'),
@@ -86,10 +86,10 @@ INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_password`, `use
 --
 
 --
--- Tablo için indeksler `categories`
+-- Tablo için indeksler `boards`
 --
-ALTER TABLE `categories`
-  ADD PRIMARY KEY (`category_id`);
+ALTER TABLE `boards`
+  ADD PRIMARY KEY (`board_id`);
 
 --
 -- Tablo için indeksler `users`
@@ -102,10 +102,10 @@ ALTER TABLE `users`
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `categories`
+-- Tablo için AUTO_INCREMENT değeri `boards`
 --
-ALTER TABLE `categories`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+ALTER TABLE `boards`
+  MODIFY `board_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`
