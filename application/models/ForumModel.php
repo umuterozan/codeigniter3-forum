@@ -7,15 +7,15 @@ class ForumModel extends CI_Model {
         parent::__construct();
     }
 
-    public function getCategories(){
-        $alt_categories = $this->db->get_where('categories', array(
-            'category_parent' => null
+    public function getBoards(){
+        $alt_boards = $this->db->get_where('boards', array(
+            'board_parent' => null
         ));
-        return $alt_categories->result();
+        return $alt_boards->result();
     }
 
-    public function getAltCategories($where){
-        $categories = $this->db->get_where('categories', $where);
-        return $categories->result();
+    public function getAltBoards($where){
+        $boards = $this->db->get_where('boards', $where);
+        return $boards->result();
     }
 }

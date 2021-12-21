@@ -8,11 +8,11 @@ class Board extends CI_Controller {
         $this->load->model('forummodel', 'forum');
 	}
 
-    public function index($kategori){
-        $category = $this->forum->getAltCategories(array('category_url' => $kategori));
-        if (!empty($category)) {
+    public function index($get_board){
+        $board = $this->forum->getAltBoards(array('board_url' => $get_board));
+        if (!empty($board)) {
             $this->load->view('board', array(
-                'category_name' => $category[0]->category_name
+                'board_name' => $board[0]->board_name
             ));
         } else {
             show_404();

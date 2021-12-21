@@ -12,7 +12,7 @@ class Home extends CI_Controller {
 	{
 		// $this->load->view('home');
 		$data = array(
-			'category_parent' => $this->forummodel->getCategories()
+			'board_parent' => $this->forummodel->getBoards()
 		);
 		$this->load->view('home', $data);
 	}

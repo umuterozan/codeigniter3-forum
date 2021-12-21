@@ -14,20 +14,20 @@
     <?php $this->load->view('includes/modal');?>
         <div class="container">
             <h3>Teknoloji Forumu</h3>
-            <?php foreach ($category_parent as $key => $value) : ?>
+            <?php foreach ($board_parent as $key => $value) : ?>
                 <span class="u-anchorTarget" id="donanim"></span>
                 <div class="block-container">
                     <h2 class="block-header">
-                        <a href="#donanim"><?=$value->category_name?></a>
+                        <a href="#donanim"><?=$value->board_name?></a>
                     </h2>
-                    <?php foreach($this->forummodel->getAltCategories(array('category_parent' => $value->category_id)) as $key => $value) : ?>
+                    <?php foreach($this->forummodel->getAltBoards(array('board_parent' => $value->board_id)) as $key => $value) : ?>
                         <div class="node-body">
                             <div class="node-icon">
                                 <i class="far fa-comments" style="opacity:1;color: #f9c479;"></i>
                             </div>
                             <div class="node-main">
                                 <h3 class="node-title">
-                                    <a href="<?=base_url('forumlar/' . $value->category_url);?>"><?=$value->category_name?></a>
+                                    <a href="<?=base_url('forumlar/' . $value->board_url);?>"><?=$value->board_name?></a>
                                 </h3>
                             </div>
                             <div class="node-stats">
