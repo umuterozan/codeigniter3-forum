@@ -32,7 +32,7 @@
                                 </div>
                                 <div class="structItem-cell structItem-cell--main">
                                     <div class="structItem-title">
-                                        <a href="<?=base_url('konular/14-bilgisayar-hizlandirma-ve-fps-arttirma-yontemi')?>"><?=$value->topic_name;?></a>
+                                        <a href="<?=base_url('konular/' . $value->topic_url);?>"><?=$value->topic_name;?></a>
                                     </div>
                                     <div class="structItem-minor">
                                         <ul class="structItem-parts">
@@ -40,7 +40,7 @@
                                                 <a href="#" class="username"><?=$value->user_name;?><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></a>
                                             </li>
                                             <li class="structItem-startDate">
-                                                <a href="#" rel="nofollow"><time class="u-dt" dir="auto"><?=$value->topic_created_date;?></time></a>
+                                                <a href="<?=base_url('konular/' . $value->topic_url);?>" rel="nofollow"><time class="u-dt" dir="auto"><?=$value->topic_created_date;?></time></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -59,12 +59,12 @@
                                             Görüntüleme:
                                         </dt>
                                         <dd>
-                                            333
+                                            0
                                         </dd>
                                     </dl>
                                 </div>
                                 <div class="structItem-cell structItem-cell--latest">
-                                    <a href="#" rel="nofollow"><time class="structItem-latestDate u-dt" dir="auto"><?=$value->topic_created_date;?></time></a>
+                                    <a href="<?=base_url('konular/' . $value->topic_url);?>" rel="nofollow"><time class="structItem-latestDate u-dt" dir="auto"><?=$value->topic_created_date;?></time></a>
                                     <div class="structItem-minor">
                                         <a href="#" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
                                     </div>

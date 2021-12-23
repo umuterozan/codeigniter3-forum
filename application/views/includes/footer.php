@@ -14,9 +14,9 @@
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <a href="#">Community platform by umuterozan.xyz
+                    <a href="https://github.com/drepsofficial" target="blank">Community platform by dreps
                         <sup>®</sup>
-                        <span class="copyright">© 2021-2022 umuterozan.xyz</span>
+                        <span class="copyright">© 2021-2022 Teknoloji Forumu</span>
                     </a>
                 </div>
             </div>
