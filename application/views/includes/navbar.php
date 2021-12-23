@@ -10,7 +10,7 @@
                         <?php if($this->session->has_userdata('login')) : ?>
                             <li>
                                 <!-- Giriş Yap Modal Trigger -->
-                                <a href="" style="border-right: 1px solid #1d3a87;"><i class="fas fa-user"></i> <?php echo $this->session->userdata('login')['user_name']?></a>                                                               
+                                <a href="" style="border-right: 1px solid #1d3a87;"><span class="avatar avatar--xxs avatar--default avatar--default--dynamic" data-user-id="<?=$this->session->userdata('login')['user_id'];?>" style="background-color: #adadeb; color: #2e2eb8"><span class="avatar-u213-s" role="img" aria-label="<?=$this->session->userdata('login')['user_name'];?>"><?=strtoupper($this->session->userdata('login')['user_name'][0]);?></span></span> <?php echo $this->session->userdata('login')['user_name']?></a>                                                               
                             </li>
                             <li>
                                 <!--Kayıt Ol Modal Trigger -->
