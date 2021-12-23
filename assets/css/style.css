@@ -306,7 +306,7 @@ section .block-container .block-body .structItemContainer .structItem .structIte
 }
 
 section .block-container .node-body {
-  border-bottom: 1px solid #e2e2e2;
+  border-bottom: 1px solid #e7e7e7;
   display: table;
   table-layout: fixed;
   width: 100%;
