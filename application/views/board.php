@@ -47,8 +47,8 @@
                                         <dt>
                                             Cevaplar:
                                         </dt>
-                                        <dd>
-                                            0
+                                        <dd>                                            
+                                                0
                                         </dd>
                                     </dl>
                                     <dl class="pairs pairs--justified structItem-minor">
@@ -59,7 +59,7 @@
                                             0
                                         </dd>
                                     </dl>
-                                </div>
+                                </div>                                
                                 <div class="structItem-cell structItem-cell--latest">
                                     <a href="<?=base_url('konular/' . $value->topic_url);?>" rel="nofollow"><time class="structItem-latestDate u-dt" dir="auto"><?=$value->topic_created_date;?></time></a>
                                     <div class="structItem-minor">
@@ -72,7 +72,7 @@
                                             <span class="avatar-u134-s" role="img" style="font-size: 14px;"><?=strtoupper($value->user_name[0]);?></span> 
                                         </a>
                                     </div>
-                                </div>
+                                </div>                                
                             </div>                            
                         <?php endforeach;?>
                     </div>

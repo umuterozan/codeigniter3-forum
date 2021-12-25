@@ -31,11 +31,11 @@
                                 </h3>
                             </div>
                             <?php 
-                                $num_items = count($this->topicmodel->getTopics(array('board_id' => $value->board_id)));
-                                $topic_counter = 0;                         
+                                $num_rows_topics = count($this->topicmodel->getTopics(array('board_id' => $value->board_id)));
+                                $topic_counter = 0;                                         
                             ?>
                             <?php foreach($this->topicmodel->getTopics(array('board_id' => $value->board_id)) as $key => $value) : ?>
-                                <?php if(++$topic_counter === $num_items) : ?>
+                                <?php if(++$topic_counter === $num_rows_topics) : ?>
                                     <div class="node-stats">
                                         <dl class="pairs pairs-rows">
                                             <dt>Konular</dt>
