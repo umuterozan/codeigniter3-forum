@@ -15,10 +15,10 @@
         <div class="container">
             <h3>Teknoloji Forumu</h3>
             <?php foreach ($board_parent as $key => $value) : ?>
-                <span class="u-anchorTarget" id="donanim"></span>
+                <span class="u-anchorTarget" id="<?=replace_tr(strtolower($value->board_name))?>"></span>
                 <div class="block-container">
                     <h2 class="block-header">
-                        <a href="#donanim"><?=$value->board_name?></a>
+                        <a href="#<?=replace_tr(strtolower($value->board_name))?>"><?=$value->board_name?></a>
                     </h2>
                     <?php foreach($this->boardmodel->getAltBoards(array('board_parent' => $value->board_id)) as $key => $value) : ?>
                         <div class="node-body">

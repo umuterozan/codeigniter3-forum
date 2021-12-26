@@ -1019,6 +1019,70 @@ section .far {
   text-align: center;
 }
 
+.p-breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.p-breadcrumbs a {
+  color: #2577b1;
+  text-decoration: none;
+}
+
+.p-breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+.p-breadcrumbs:before, .p-breadcrumbs::after {
+  content: " ";
+  display: table;
+}
+
+.p-breadcrumbs > li {
+  float: left;
+  font-size: 13px;
+}
+
+.p-breadcrumbs > li a {
+  display: inline-block;
+  vertical-align: bottom;
+  max-width: 300px;
+  overflow: hidden;
+  white-space: nowrap;
+  word-wrap: normal;
+  text-overflow: ellipsis;
+}
+
+meta {
+  display: none;
+}
+
+.p-breadcrumbs > li::after {
+  content: " ";
+  display: inline-block;
+  text-align: center;
+}
+
+.p-breadcrumbs > li:after, .p-breadcrumbs > li::before {
+  font-style: normal;
+  font-weight: 400;
+  text-rendering: auto;
+  font-size: 90%;
+  color: #8c8c8c;
+}
+
+.p-breadcrumbs > li:last-child a {
+  font-weight: 700;
+}
+
+.p-breadcrumbs.p-breadcrumbs--bottom {
+  margin-top: 40px;
+  margin-bottom: 0;
+}
+
 footer {
   background: #152c68;
   padding: 6.5px 0;

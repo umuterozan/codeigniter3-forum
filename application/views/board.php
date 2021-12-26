@@ -13,6 +13,37 @@
     <section>
     <?php $this->load->view('includes/modal');?>
         <div class="container">
+            <ul class="p-breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList">															
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <a href="<?=base_url();?>" itemprop="item">
+                        <span itemprop="name">Forumlar</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <?php if($board_parent == 1) : ?>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#donanim')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Donanım</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php elseif($board_parent == 2) : ?>     
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#yazilim')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Yazılım</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php else : ?> 
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#diger-teknolojiler')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Diğer Teknolojiler</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php endif;?> 
+            </ul>                    
+            <br>
             <h3><?=$board_name?></h3>
             <div class="block-container">
                 <div class="block-bar"></div>
@@ -87,6 +118,36 @@
                     <?php endif;?>
                 </div>
             </div>
+            <ul class="p-breadcrumbs p-breadcrumbs--bottom" itemscope="" itemtype="https://schema.org/BreadcrumbList">															
+                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                    <a href="<?=base_url();?>" itemprop="item">
+                        <span itemprop="name">Forumlar</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                </li>
+                <?php if($board_parent == 1) : ?>
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#donanim')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Donanım</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php elseif($board_parent == 2) : ?>     
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#yazilim')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Yazılım</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php else : ?> 
+                    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+                        <a href="<?=base_url('#diger-teknolojiler')?>" itemprop="item">
+                            <span itemprop="name"><i class="fas fa-arrow-right"></i> Diğer Teknolojiler</span>
+                        </a>
+                        <meta itemprop="position" content="2">
+                    </li>
+                <?php endif;?> 
+            </ul>
         </div>
     </section>
     <br>
