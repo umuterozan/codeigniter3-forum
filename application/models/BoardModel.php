@@ -18,4 +18,12 @@ class BoardModel extends CI_Model {
         $boards = $this->db->get_where('boards', $where);
         return $boards->result();
     }
+
+    public function getTopicsCountRow($board_id) {
+        return $this->db->where(['board_id'=>$board_id])->from("topics")->count_all_results();
+    }
+    
+    public function getTotalMessagesCountRow($board_id) {
+        return $this->db->select('count(*)')->join('topics', 'messages.topic_id = topics.topic_id')->where(['board_id'=>$board_id])->from("messages")->count_all_results();
+    }
 }

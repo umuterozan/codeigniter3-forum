@@ -68,7 +68,7 @@
                                                             <div class="message-attribution message-attribution--split">
                                                                 <ul class="message-attribution-main listInline">
                                                                     <li class="u-concealed">
-                                                                        <a href="#" rel="nofollow"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->message_created_date));?></time></a>
+                                                                        <a href="#" rel="nofollow"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y - %H:%M', strtotime($value->message_created_date));?></time></a>
                                                                     </li>
                                                                 </ul>
                                                             </div>

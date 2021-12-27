@@ -48,15 +48,15 @@
                                             Cevaplar:
                                         </dt>
                                         <dd>                                            
-                                                0
+                                                <?=$this->topicmodel->getMessagesCountRow($value->topic_id);?>
                                         </dd>
                                     </dl>
                                     <dl class="pairs pairs--justified structItem-minor">
                                         <dt>
-                                            Görüntüleme:
+                                            Konu Saati:
                                         </dt>
                                         <dd>
-                                            0
+                                            <?=strftime('%H:%M', strtotime($value->topic_created_date));?>
                                         </dd>
                                     </dl>
                                 </div>                                

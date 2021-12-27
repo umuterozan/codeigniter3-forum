@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 25 Ara 2021, 18:11:56
+-- Üretim Zamanı: 27 Ara 2021, 16:17:27
 -- Sunucu sürümü: 10.4.21-MariaDB
 -- PHP Sürümü: 8.0.10
 
@@ -79,7 +79,8 @@ CREATE TABLE `messages` (
 INSERT INTO `messages` (`message_id`, `message_content`, `topic_id`, `message_created_date`, `user_id`) VALUES
 (1, '<b>Bilgisayarınız yavaş çalışıyorsa, panik yapmayın.</b><br>\r\n<br>\r\n<br>\r\n<br>\r\n<br>\r\n<b>Zaman içinde daha yavaş PC performansı, düzenli kullanımın tamamen normal bir yan etkisidir ve tam bir sabit diskten donanım arızasına kadar her şeyden kaynaklanabilir.</b><br>\r\n<br>\r\n<b>Ayrıca, bu hızlı ve basit temizlik ipuçlarıyla genellikle en azından biraz tersine çevrilebilir.</b><br>\r\n<br>\r\n<b>Peki bilgisayar hızlandırma yöntemleri nelerdir, bilgisayar nasıl hızlandırılır? İşte PC hızlandırma 2020 yöntemleri için tam kılavuzumuz</b>', 1, '2021-12-25 14:28:59', 3),
 (2, '                                                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatem quisquam minus aut ratione nostrum veniam neque eum enim earum labore, laudantium aperiam molestiae commodi amet suscipit! Voluptas, temporibus repellat!', 1, '2021-12-25 15:35:39', 2),
-(3, '                                                                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatem quisquam minus aut ratione nostrum veniam neque eum enim earum labore, laudantium aperiam molestiae commodi amet suscipit! Voluptas, temporibus repellat!', 5, '2021-12-25 16:24:13', 1);
+(4, 'lorem ipsum dolor sit', 3, '2021-12-27 14:33:34', 3),
+(5, 'lorem ipsum dolor sit2', 3, '2021-12-27 14:33:47', 3);
 
 -- --------------------------------------------------------
 
@@ -102,9 +103,7 @@ CREATE TABLE `topics` (
 
 INSERT INTO `topics` (`topic_id`, `topic_name`, `topic_url`, `board_id`, `topic_created_date`, `user_id`) VALUES
 (1, '14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi', '14-bilgisayar-hizlandirma-ve-fps-arttirma-yontemi', 4, '2021-12-22 12:43:32', 3),
-(3, 'Akıllı Telefon / Tablet testi', 'asdasdasdasdasdasd', 5, '2021-12-23 11:23:50', 3),
-(5, 'asdasdasdasdasd', 'asdasdasdasd', 4, '2021-12-23 16:42:39', 2),
-(6, 'qweqweqweqweqwe', 'qweqweqweqwe', 4, '2021-12-23 16:56:43', 3);
+(3, 'Akıllı Telefon / Tablet testi', 'asdasdasdasdasdasd', 5, '2021-12-23 11:23:50', 3);
 
 -- --------------------------------------------------------
 
@@ -171,13 +170,13 @@ ALTER TABLE `boards`
 -- Tablo için AUTO_INCREMENT değeri `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`

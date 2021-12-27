@@ -10,4 +10,8 @@ class TopicModel extends CI_Model {
         $topics = $this->db->join('users', 'topics.user_id = users.user_id')->get_where('topics', $where);
         return $topics->result();
     }
+
+    public function getMessagesCountRow($topic_id) {
+        return $this->db->where(['topic_id'=>$topic_id])->from("messages")->count_all_results();
+    }
 }

@@ -39,11 +39,11 @@
                                     <div class="node-stats">
                                         <dl class="pairs pairs-rows">
                                             <dt>Konular</dt>
-                                            <dd><?=$topic_counter;?></dd>
+                                            <dd><?=$this->boardmodel->getTopicsCountRow($value->board_id);?></dd>
                                         </dl>
                                         <dl class="pairs pairs-rows">
                                             <dt>Mesajlar</dt>
-                                            <dd>0</dd>
+                                            <dd><?=$this->boardmodel->getTotalMessagesCountRow($value->board_id);?></dd>
                                         </dl>
                                     </div>
                                     <div class="node-extra">
@@ -53,7 +53,7 @@
                                             </a>
                                         </div>
                                         <div class="node-extra-row">
-                                            <a href="#" class="node-extra-title" title="<?=$value->topic_name;?>"><?=$value->topic_name;?></a>
+                                            <a href="<?=base_url('konular/' . $value->topic_url);?>" class="node-extra-title" title="<?=$value->topic_name;?>"><?=$value->topic_name;?></a>
                                         </div>
                                         <div class="node-extra-row">
                                             <ul class="listInline">
