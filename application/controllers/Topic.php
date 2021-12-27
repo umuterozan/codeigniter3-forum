@@ -17,6 +17,7 @@ class Topic extends CI_Controller {
 				'topic_name' => $topic[0]->topic_name,
 				'user_name' => $topic[0]->user_name,
 				'topic_created_date' => $topic[0]->topic_created_date,
+				'board_id' => $topic[0]->board_id,
 				'messages' => $messages
 			));
 		} else {

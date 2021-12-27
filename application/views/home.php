@@ -57,7 +57,7 @@
                                         </div>
                                         <div class="node-extra-row">
                                             <ul class="listInline">
-                                                <li><time class="node-extra-date u-dt" dir="auto"><?=$value->topic_created_date;?></time><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></li>
+                                                <li><time class="node-extra-date u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></li>
                                                 <li class="node-extra-user"><a href="#" class="username"><?=$value->user_name?></a></li>
                                             </ul>
                                         </div>

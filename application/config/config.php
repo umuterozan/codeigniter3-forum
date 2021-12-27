@@ -77,6 +77,7 @@ $config['url_suffix'] = '';
 |
 */
 $config['language']	= 'turkish';
+setlocale(LC_ALL, 'turkish');
 
 /*
 |--------------------------------------------------------------------------

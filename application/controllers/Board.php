@@ -16,7 +16,6 @@ class Board extends CI_Controller {
             $topics = $this->topicmodel->getTopics(array('board_id' => $board_id));             
             $this->load->view('board', array(
                 'board_name' => $board[0]->board_name,
-                'board_parent' => $board[0]->board_parent,
                 'topics' => $topics
             ));
         } else {

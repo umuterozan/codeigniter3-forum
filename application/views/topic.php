@@ -29,7 +29,7 @@
                                 <i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;color: #8c8c8c;"></i>
                                 <i class="fa--xf far fa-clock"></i>
                                 <span class="u-srOnly"></span>
-                                <a href="#" class="u-concealed"><time class="u-dt" dir="auto"><?=$topic_created_date;?></time></a>
+                                <a href="#" class="u-concealed"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($topic_created_date));?></time></a>
                             </li>
                         </ul>
                     </div>
@@ -68,7 +68,7 @@
                                                             <div class="message-attribution message-attribution--split">
                                                                 <ul class="message-attribution-main listInline">
                                                                     <li class="u-concealed">
-                                                                        <a href="#" rel="nofollow"><time class="u-dt" dir="auto"><?=$value->message_created_date;?></time></a>
+                                                                        <a href="#" rel="nofollow"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->message_created_date));?></time></a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
