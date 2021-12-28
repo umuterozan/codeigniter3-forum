@@ -5,20 +5,14 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="giris_yapModalLabel">Giriş Yap</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <?php if($this->session->flashdata('success')) : ?>
-                    <div class="alert alert-success d-flex align-items-center" role="alert">
-                        <div>
-                            <?=$this->session->flashdata('success');?>
-                        </div>
-                    </div>
-                    <?php elseif($this->session->flashdata('login_error')) : ?>
-                        <div class="alert alert-danger d-flex align-items-center" role="alert">
+                </div>                                   
+                <?php if($this->session->flashdata('login_error')) : ?>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
                         <div>
                             <?=$this->session->flashdata('login_error');?>
                         </div>
                     </div>
-                <?php endif;?>
+                <?php endif;?>                
                 <div class="modal-body">
                     <form action="<?=base_url('user/login');?>" method="post">
                         <div class="mb-3">
@@ -52,10 +46,10 @@
                     <h5 class="modal-title" id="kayit_olModalLabel">Kayıt Ol</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <?php if($this->session->flashdata('error')) : ?>
+                <?php if($this->session->flashdata('register_error')) : ?>
                     <div class="alert alert-danger d-flex align-items-center" role="alert">
                         <div>
-                            <?=$this->session->flashdata('error');?>
+                            <?=$this->session->flashdata('register_error');?>                            
                         </div>
                     </div>
                 <?php endif;?>

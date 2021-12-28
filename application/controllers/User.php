@@ -23,11 +23,11 @@ class User extends CI_Controller {
                     'user_password' => $this->input->post('password')
                 );
                 if ($this->user->insert_user($user) == TRUE) {
-                    $this->session->set_flashdata('success', 'Başarıyla kayıt olundu!');
+                    $this->session->set_flashdata('register_success', TRUE);
                     redirect(base_url());
                 }
             } else {
-                $this->session->set_flashdata('error', validation_errors());
+                $this->session->set_flashdata('register_error', validation_errors());
                 redirect(base_url());
             }
         }
@@ -36,7 +36,7 @@ class User extends CI_Controller {
     public function login() {
         if ($this->input->method('REQUEST_METHOD') == 'POST') {
             $this->form_validation->set_rules('email', 'E-posta adresiniz', 'required|trim|valid_email');
-            $this->form_validation->set_rules('password', 'Parola', 'required|trim');
+            $this->form_validation->set_rules('password', 'Parola', 'required|trim|min_length[4]|max_length[22]');
 
             if ($this->form_validation->run() == TRUE) {
                 $user = array(
@@ -50,12 +50,16 @@ class User extends CI_Controller {
                         'user_id' => $user_data->user_id,
                         'user_name' => $user_data->user_name
                     ));
-                    redirect((base_url()));
+                    $this->session->set_flashdata('login_success', TRUE);
+                    redirect(base_url());
+                } else {
+                    $this->session->set_flashdata('login_error', 'Böyle bir hesap bulunamadı!');
+                    redirect(base_url());
                 }
+            } else {
+                $this->session->set_flashdata('login_error', validation_errors());                    
+                redirect(base_url());
             }
-        } else {
-            $this->session->set_flashdata('login_error', validation_errors());
-            redirect(base_url());
         }
     }
 

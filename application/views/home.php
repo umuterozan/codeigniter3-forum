@@ -12,7 +12,7 @@
     <?php $this->load->view('includes/navbar');?>
     <section>
     <?php $this->load->view('includes/modal');?>
-        <div class="container">
+        <div class="container">            
             <h3>Teknoloji Forumu</h3>
             <?php foreach ($board_parent as $key => $value) : ?>
                 <span class="u-anchorTarget" id="<?=replace_tr(strtolower($value->board_name))?>"></span>
@@ -73,21 +73,6 @@
     </section>
     <br>
     <?php $this->load->view('includes/footer');?>
-    <?php $this->load->view('includes/script');?>
-    <?php if($this->session->flashdata('error')) : ?>
-        <script>
-            var myModal = new bootstrap.Modal(document.getElementById("kayit_olModal"), {});
-            document.onreadystatechange = function () {
-            myModal.show();
-            };
-        </script>
-    <?php elseif($this->session->flashdata('success') || $this->session->flashdata('login_error')) : ?>
-        <script>
-            var myModal = new bootstrap.Modal(document.getElementById("giris_yapModal"), {});
-            document.onreadystatechange = function () {
-            myModal.show();
-            };
-        </script>
-    <?php endif;?>
+    <?php $this->load->view('includes/script');?>      
 </body>
 </html>
