@@ -81,12 +81,18 @@
             <div class="block-outer block-outer--after">
                 <div class="block-outer-opposite">
                     <?php if($this->session->has_userdata('login')) : ?>
-                        <a href="" class="button--link button--wrap button" data-xf-click="overlay" style="background: #f2930d;color: #fff;border-color: #f39e25 #da840c #da840c #f39e25;"><span class="button-text"><i class="far fa-edit"></i> Yeni Konu</span></a>
+                        <a class="button--link button--wrap button post-thread-button" data-bs-toggle="collapse" href="#post_threadCollapse" role="button" aria-expanded="false" aria-controls="post_threadCollapse"><span class="button-text"><i class="far fa-edit"></i> Yeni Konu</span></a>
                     <?php else : ?>
-                        <a href="" class="button--link button--wrap button" data-xf-click="overlay" data-bs-toggle="modal" data-bs-target="#giris_yapModal"><span class="button-text">Cevap yazmak için giriş yapmalı veya kayıt olmalısınız.</span></a>
+                        <a href="" class="button--link button--wrap button login-for-post-thread" data-bs-toggle="modal" data-bs-target="#giris_yapModal"><span class="button-text">Cevap yazmak için giriş yapmalı veya kayıt olmalısınız.</span></a>
                     <?php endif;?>
                 </div>
-            </div>            
+            </div>
+            <br><br>
+            <div class="collapse" id="post_threadCollapse">
+                <div class="card card-body">
+                    POST THREAD EDİTOR
+                </div>
+            </div> 
         </div>
     </section>
     <br>

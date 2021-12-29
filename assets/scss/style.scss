@@ -827,6 +827,7 @@ section {
     height: 24px;
     font-size: 14px;
 }
+
 .block-outer {
     padding-bottom: 6px;
     &:empty {
@@ -866,6 +867,21 @@ section {
     padding-bottom: 5px;
     padding-left: 10px;
     text-align: center;
+}
+
+.button--link.button--wrap.button.post-thread-button {
+    background: #f2930d;
+    color: #fff;
+    border-color: #f39e25 #da840c #da840c #f39e25;
+    font-size:15px;
+    &:hover {
+        background: rgba($color: #cb7b0b, $alpha: 0.9S);
+        transition: all 0.1s ease 0s;
+    }
+}
+.button--link.button--wrap.button.login-for-post-thread:hover {
+    text-decoration: none;
+    background: #edf6fd;
 }
 
 .p-breadcrumbs {

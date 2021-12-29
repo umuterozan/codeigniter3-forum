@@ -91,7 +91,11 @@
                                 </div>    
                                 <div class="block-outer block-outer--after" style="margin-top: -24px;">
                                     <div class="block-outer-opposite">
-                                        <a href="" class="button--link button--wrap button" data-xf-click="overlay" data-bs-toggle="modal" data-bs-target="#giris_yapModal" style="text-decoration: none;"><span class="button-text">Cevap yazmak için giriş yapmalı veya kayıt olmalısınız.</span></a>
+                                    <?php if($this->session->has_userdata('login')) : ?>
+                                        mesaj gönderme kutusu gelecek
+                                    <?php else : ?>
+                                        <a href="" class="button--link button--wrap button login-for-post-thread" data-bs-toggle="modal" data-bs-target="#giris_yapModal"><span class="button-text">Cevap yazmak için giriş yapmalı veya kayıt olmalısınız.</span></a>
+                                    <?php endif;?>                                        
                                     </div>
                                 </div>
                             </div>

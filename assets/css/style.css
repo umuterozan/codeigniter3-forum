@@ -1019,6 +1019,24 @@ section .far {
   text-align: center;
 }
 
+.button--link.button--wrap.button.post-thread-button {
+  background: #f2930d;
+  color: #fff;
+  border-color: #f39e25 #da840c #da840c #f39e25;
+  font-size: 15px;
+}
+
+.button--link.button--wrap.button.post-thread-button:hover {
+  background: rgba(203, 123, 11, 0.9);
+  -webkit-transition: all 0.1s ease 0s;
+  transition: all 0.1s ease 0s;
+}
+
+.button--link.button--wrap.button.login-for-post-thread:hover {
+  text-decoration: none;
+  background: #edf6fd;
+}
+
 .p-breadcrumbs {
   list-style: none;
   margin: 0;
