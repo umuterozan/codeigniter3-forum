@@ -33,3 +33,8 @@
         };
     </script>
 <?php endif;?>
+<?php if($this->session->flashdata('logout')) : ?>
+    <script>
+        toastr.success('Başarıyla çıkış yapıldı!');
+    </script>
+<?php endif;?>
