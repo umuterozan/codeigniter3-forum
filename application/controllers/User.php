@@ -66,7 +66,7 @@ class User extends CI_Controller {
     public function logout() {
         if ($this->session->has_userdata('login')) {
             $this->session->unset_userdata('login');
-            $this->session->set_flashdata('logout', TRUE);
+            $this->session->set_flashdata('login_logout', TRUE);
             redirect(base_url());
         }
     }
