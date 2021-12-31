@@ -87,11 +87,29 @@
                     <?php endif;?>
                 </div>
             </div>
-            <br><br>
             <div class="collapse" id="post_threadCollapse">
-                <div class="card card-body">
-                    POST THREAD EDİTOR
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="threadTitleInput" placeholder="Konu başlığı">
                 </div>
+                <div class="mb-3">
+                    <div id="editor">
+                        <p>This is some sample content.</p>
+                    </div>
+                    <div id="word-count"></div>
+                </div>
+                <script>
+                    ClassicEditor
+                        .create( document.querySelector( '#editor' ) )        
+                        .then( editor => {
+                        const wordCountPlugin = editor.plugins.get( 'WordCount' );
+                        const wordCountWrapper = document.getElementById( 'word-count' );
+
+                        wordCountWrapper.appendChild( wordCountPlugin.wordCountContainer );
+                    } )                
+                        .catch( error => {
+                            console.error( error );
+                        } );
+                </script>
             </div> 
         </div>
     </section>
