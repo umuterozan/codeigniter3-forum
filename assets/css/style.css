@@ -1038,9 +1038,10 @@ section .far {
 }
 
 #post_threadCollapse {
-  margin-top: 40px;
-  padding: 10px;
-  color: #141414;
+  margin-top: 50px;
+}
+
+.demo-update {
   background: #fefefe;
   border-width: 1px;
   border-style: solid;
@@ -1049,6 +1050,74 @@ section .far {
   border-bottom-color: #cbcbcb;
   border-left-color: #d8d8d8;
   border-radius: 4px;
+  padding: 1em;
+}
+
+.demo-update h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 0 .5em;
+  padding: 0;
+}
+
+.demo-update .ck.ck-editor__editable_inline {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-transition: background .5s ease-out;
+  transition: background .5s ease-out;
+  min-height: 6em;
+  margin-bottom: 1em;
+}
+
+.demo-update__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.demo-update__chart {
+  margin-right: 1em;
+}
+
+.demo-update__chart__circle {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.demo-update__chart__characters {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.demo-update__words {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  opacity: .5;
+}
+
+.demo-update__limit-close .demo-update__chart__circle {
+  stroke: #ff850a;
+}
+
+.demo-update__limit-exceeded .ck.ck-editor__editable_inline {
+  background: #fff0f0;
+}
+
+.demo-update__limit-exceeded .demo-update__chart__circle {
+  stroke: #ff0a0a;
+}
+
+.demo-update__limit-exceeded .demo-update__chart__characters {
+  fill: #ff0a0a;
 }
 
 footer {

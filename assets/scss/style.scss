@@ -885,10 +885,11 @@ section {
 }
 
 #post_threadCollapse {
-    margin-top: 40px;
-    padding: 10px;
-    color: #141414;
-    background: #fefefe;    
+    margin-top: 50px;
+}
+
+.demo-update {
+    background: #fefefe;
     border-width: 1px;
     border-style: solid;
     border-top-color: #dfdfdf;
@@ -896,6 +897,62 @@ section {
     border-bottom-color: #cbcbcb;
     border-left-color: #d8d8d8;
     border-radius: 4px;
+    padding: 1em;
+}
+
+.demo-update h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 .5em;
+    padding: 0;
+}
+
+.demo-update .ck.ck-editor__editable_inline {
+    border: 1px solid hsla( 0, 0%, 0%, 0.15 );
+    transition: background .5s ease-out;
+    min-height: 6em;
+    margin-bottom: 1em;
+}
+
+.demo-update__controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.demo-update__chart {
+    margin-right: 1em;
+}
+
+.demo-update__chart__circle {
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.demo-update__chart__characters {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.demo-update__words {
+    flex-grow: 1;
+    opacity: .5;
+}
+
+.demo-update__limit-close .demo-update__chart__circle {
+    stroke: hsl( 30, 100%, 52% );
+}
+
+.demo-update__limit-exceeded .ck.ck-editor__editable_inline {
+    background: hsl( 0, 100%, 97% );
+}
+
+.demo-update__limit-exceeded .demo-update__chart__circle {
+    stroke: hsl( 0, 100%, 52% );
+}
+
+.demo-update__limit-exceeded .demo-update__chart__characters {
+    fill: hsl( 0, 100%, 52% );
 }
 
 footer {
