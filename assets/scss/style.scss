@@ -671,6 +671,15 @@ section {
                         border-left-width: 0;
                         border-right-color: #d8d8d8;
                     }
+                    .message-userArrow:after {
+                        position: absolute;
+                        top: -9px;
+                        right: -10px;
+                        content: "";
+                        border: 9px solid transparent;
+                        border-left-width: 0;
+                        border-right-color: #fefefe;
+                    }
                 }
             }
 

@@ -776,6 +776,16 @@ section .p-body .p-body-main .block-body .message-inner .message-userArrow {
   border-right-color: #d8d8d8;
 }
 
+section .p-body .p-body-main .block-body .message-inner .message-userArrow:after {
+  position: absolute;
+  top: -9px;
+  right: -10px;
+  content: "";
+  border: 9px solid transparent;
+  border-left-width: 0;
+  border-right-color: #fefefe;
+}
+
 section .p-body .p-body-main .message-cell.message-cell--main {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
