@@ -87,27 +87,30 @@
                     <?php endif;?>
                 </div>
             </div>
-            <div class="collapse" id="post_threadCollapse">
-                <h3>Yeni Konu</h3>                
-                <div class="demo-update">
-                    <div class="mb-3">
-                        <input type="text" class="form-control" id="threadTitleInput" placeholder="Konu başlığı">
-                    </div>
-                    <div id="demo-update__editor">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>
-                    <div class="demo-update__controls">
-                        <span class="demo-update__words"></span>
-                        <svg class="demo-update__chart" viewbox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                            <circle stroke="hsl(0, 0%, 93%)" stroke-width="3" fill="none" cx="20" cy="20" r="17" />
-                            <circle class="demo-update__chart__circle" stroke="hsl(202, 92%, 59%)" stroke-width="3" stroke-dasharray="134,534" stroke-linecap="round" fill="none" cx="20" cy="20" r="17" />
-                            <text class="demo-update__chart__characters" x="50%" y="50%" dominant-baseline="central" text-anchor="middle"></text>
-                        </svg>
-                        <button type="button" class="demo-update__send btn btn-primary">Konuyu aç</button>
-                    </div>
-                </div>
-                <?php $this->load->view('includes/editor_script');?>
-            </div> 
+            <?php if($this->session->has_userdata('login')) : ?>                
+                <form action="<?=base_url('board/insert')?>" method="POST">
+                    <input type="number" class="form-control" id="threadBoardID" name="input_board_id" value="<?=$board_id;?>" style="display: none;">                        
+                    <div class="collapse" id="post_threadCollapse">
+                        <h3>Yeni Konu</h3>                
+                        <div class="demo-update">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="threadTitleInput" name="input_topic_name" placeholder="Konu başlığı" required>
+                            </div>
+                            <textarea id="demo-update__editor" name="input_topic_message"></textarea>
+                            <div class="demo-update__controls">
+                                <span class="demo-update__words"></span>
+                                <svg class="demo-update__chart" viewbox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                                    <circle stroke="hsl(0, 0%, 93%)" stroke-width="3" fill="none" cx="20" cy="20" r="17" />
+                                    <circle class="demo-update__chart__circle" stroke="hsl(202, 92%, 59%)" stroke-width="3" stroke-dasharray="134,534" stroke-linecap="round" fill="none" cx="20" cy="20" r="17" />
+                                    <text class="demo-update__chart__characters" x="50%" y="50%" dominant-baseline="central" text-anchor="middle"></text>
+                                </svg>                                
+                                <button type="submit" class="demo-update__send btn btn-primary">Konuyu aç</button>
+                            </div>                            
+                        </div>
+                        <script src="<?=base_url('assets/js/runckeditor.js')?>"></script>
+                    </div> 
+                </form>
+            <?php endif;?>
         </div>
     </section>
     <br>

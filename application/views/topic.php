@@ -98,38 +98,40 @@
                                 </div>
                                 <?php if($this->session->has_userdata('login')) : ?>
                                     <br><br>
-                                    <div class="block-body">
-                                        <article class="message message--post">
-                                            <span class="u-anchorTarget"></span>
-                                            <div class="message-inner">
-                                                <div class="message-cell message-cell--user">
-                                                    <div itemscope itemtype="https://schema.org/Person" class="message-user">
-                                                        <div class="message-avatar">
-                                                            <div class="message-avatar-wrapper">
-                                                                <a href="#" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span class="avatar-u134-m" role="img" aria-label="Teknonely (APK Meydanı)">A</span></a>
-                                                            </div>
-                                                        </div>                                                        
-                                                        <span class="message-userArrow"></span>
+                                    <form action="<?=base_url('topic/insert')?>" method="POST">
+                                        <input type="number" class="form-control" id="threadTopicID" name="input_topic_id" value="<?=$topic_id;?>" style="display: none;">
+                                        <input type="text" class="form-control" id="threadTopicURL" name="input_topic_url" value="<?=$topic_url;?>" style="display: none;">
+                                        <div class="block-body">
+                                            <article class="message message--post">
+                                                <span class="u-anchorTarget"></span>
+                                                <div class="message-inner">
+                                                    <div class="message-cell message-cell--user">
+                                                        <div itemscope itemtype="https://schema.org/Person" class="message-user">
+                                                            <div class="message-avatar">
+                                                                <div class="message-avatar-wrapper">
+                                                                    <a href="#" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span>A</span></a>
+                                                                </div>
+                                                            </div>                                                        
+                                                            <span class="message-userArrow"></span>
+                                                        </div>
                                                     </div>
+                                                    <div class="demo-update" style="border:none;">
+                                                        <textarea id="demo-update__editor" name="input_message_content"></textarea>
+                                                        <div class="demo-update__controls">
+                                                            <span class="demo-update__words"></span>
+                                                            <svg class="demo-update__chart" viewbox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+                                                                <circle stroke="hsl(0, 0%, 93%)" stroke-width="3" fill="none" cx="20" cy="20" r="17" />
+                                                                <circle class="demo-update__chart__circle" stroke="hsl(202, 92%, 59%)" stroke-width="3" stroke-dasharray="134,534" stroke-linecap="round" fill="none" cx="20" cy="20" r="17" />
+                                                                <text class="demo-update__chart__characters" x="50%" y="50%" dominant-baseline="central" text-anchor="middle"></text>
+                                                            </svg>
+                                                            <button type="submit" class="demo-update__send btn btn-primary">Yanıtı gönder</button>
+                                                        </div>
+                                                    </div>
+                                                    <script src="<?=base_url('assets/js/runckeditor.js')?>"></script>
                                                 </div>
-                                                <div class="demo-update" style="border:none;">
-                                                    <div id="demo-update__editor">
-                                                        <p>Yanıtınızı yazın...</p>
-                                                    </div>
-                                                    <div class="demo-update__controls">
-                                                        <span class="demo-update__words"></span>
-                                                        <svg class="demo-update__chart" viewbox="0 0 40 40" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
-                                                            <circle stroke="hsl(0, 0%, 93%)" stroke-width="3" fill="none" cx="20" cy="20" r="17" />
-                                                            <circle class="demo-update__chart__circle" stroke="hsl(202, 92%, 59%)" stroke-width="3" stroke-dasharray="134,534" stroke-linecap="round" fill="none" cx="20" cy="20" r="17" />
-                                                            <text class="demo-update__chart__characters" x="50%" y="50%" dominant-baseline="central" text-anchor="middle"></text>
-                                                        </svg>
-                                                        <button type="button" class="demo-update__send btn btn-primary">Yanıtı gönder</button>
-                                                    </div>
-                                                </div>
-                                                <?php $this->load->view('includes/editor_script');?>
-                                            </div>
-                                        </article>
-                                    </div>
+                                            </article>
+                                        </div>
+                                    </form>
                                 <?php endif;?>
                             </div>
                         </div>
