@@ -37,7 +37,7 @@
                                                 <a href="#" class="username"><?=$value->user_name;?><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></a>
                                             </li>
                                             <li class="structItem-startDate">
-                                                <a href="<?=base_url('konular/' . $value->topic_url);?>" rel="nofollow"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
+                                                <a href="<?=base_url('konular/' . $value->topic_url);?>"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -61,7 +61,7 @@
                                     </dl>
                                 </div>                                
                                 <div class="structItem-cell structItem-cell--latest">
-                                    <a href="<?=base_url('konular/' . $value->topic_url);?>" rel="nofollow"><time class="structItem-latestDate u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
+                                    <a href="<?=base_url('konular/' . $value->topic_url);?>"><time class="structItem-latestDate u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
                                     <div class="structItem-minor">
                                         <a href="#" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
                                     </div>

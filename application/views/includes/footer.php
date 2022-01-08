@@ -7,14 +7,14 @@
                     </div>
                     <div class="footer-row-opposite"> 
                         <a href="">İletişim</a>
-                        <a href="">Terms and rules</a>
-                        <a href="">Privacy policy</a>
-                        <a href="">Help</a>
-                        <a href="">Home</a>
+                        <a href="">Kurallar</a>
+                        <a href="">Gizlilik politikası</a>
+                        <a href="">Yardım</a>
+                        <a href="<?=base_url()?>">Anasayfa</a>
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <a href="https://github.com/drepsofficial/project" target="blank">Community platform by 
+                    <a href="https://github.com/drepsofficial/project" target="blank">Community platform by teknoloji
                         <sup>®</sup>
                         <span class="copyright">© 2021-2022 Teknoloji Forumu</span>
                     </a>
