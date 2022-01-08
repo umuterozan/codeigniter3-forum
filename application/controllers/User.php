@@ -22,7 +22,7 @@ class User extends CI_Controller {
                     'user_email' => $this->input->post('email'),
                     'user_password' => $this->input->post('password')
                 );
-                if ($this->user->insert_user($user) == TRUE) {
+                if ($this->user->insertUser($user) == TRUE) {
                     $this->session->set_flashdata('register_success', TRUE);
                     redirect(base_url());
                 }
@@ -43,7 +43,7 @@ class User extends CI_Controller {
                     'user_email' => $this->input->post('email'),
                     'user_password' => $this->input->post('password')
                 );
-                $user_data = $this->user->select_user($user);
+                $user_data = $this->user->selectUser($user);
                 if ($user_data->num_rows() > 0) {
                     $user_data = $user_data->row();
                     $this->session->set_userdata('login', array(

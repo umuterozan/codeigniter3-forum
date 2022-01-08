@@ -7,7 +7,7 @@ class UserModel extends CI_Model {
         parent::__construct();    
     }
 
-    public function insert_user($data) {
+    public function insertUser($data) {
         $this->db->insert('users', $data);
 
         if ($this->db->affected_rows() > 0)
@@ -15,7 +15,7 @@ class UserModel extends CI_Model {
         return false;
     }
 
-    public function select_user($data) {
+    public function selectUser($data) {
         return $this->db->get_where('users', $data);
     }
 }

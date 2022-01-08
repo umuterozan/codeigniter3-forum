@@ -14,7 +14,7 @@
                     </div>
                 </div>
                 <div class="footer-copyright">
-                    <a href="https://github.com/drepsofficial" target="blank">Community platform by dreps
+                    <a href="https://github.com/drepsofficial/project" target="blank">Community platform by 
                         <sup>®</sup>
                         <span class="copyright">© 2021-2022 Teknoloji Forumu</span>
                     </a>
