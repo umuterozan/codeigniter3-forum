@@ -7,6 +7,7 @@ class Home extends CI_Controller {
 		parent::__construct();
 		$this->load->model('boardmodel');
 		$this->load->model('topicmodel');
+		$this->load->model('usermodel');
 	}
 
 	public function index()

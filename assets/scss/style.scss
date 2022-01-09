@@ -34,11 +34,11 @@ header {
 
         .right-items-navbar a {
             padding: 30px 10px;
-
+            
             &:hover {
                 background: rgba($color: #1b3885, $alpha: 0.9S);
                 transition: all 0.1s ease 0s;
-            }
+            }            
         }
 
 
@@ -962,6 +962,28 @@ section {
 
 .demo-update__limit-exceeded .demo-update__chart__characters {
     fill: hsl( 0, 100%, 52% );
+}
+
+.account-detail {
+    background: #f5f5f5;
+    width: 450px;
+    padding: 10px;
+    display: flex;
+
+    .account-detail-avatar {
+        text-align: center;
+        padding-top: 20px;
+        margin-right: 20px;
+    }
+
+    .account-detail-content {
+        b {
+            color: #2577b1;
+        }
+        span {
+            color: #141414;
+        }
+    }
 }
 
 footer {

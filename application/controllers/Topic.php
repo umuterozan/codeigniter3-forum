@@ -6,6 +6,7 @@ class Topic extends CI_Controller {
 		parent::__construct();
 		$this->load->model('topicmodel');
 		$this->load->model('messagemodel');
+		$this->load->model('usermodel');
 		$this->load->library('form_validation');
 	}
 

@@ -1130,6 +1130,29 @@ section .far {
   fill: #ff0a0a;
 }
 
+.account-detail {
+  background: #f5f5f5;
+  width: 450px;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.account-detail .account-detail-avatar {
+  text-align: center;
+  padding-top: 20px;
+  margin-right: 20px;
+}
+
+.account-detail .account-detail-content b {
+  color: #2577b1;
+}
+
+.account-detail .account-detail-content span {
+  color: #141414;
+}
+
 footer {
   background: #152c68;
   padding: 6.5px 0;

@@ -7,6 +7,7 @@ class Board extends CI_Controller {
 		parent::__construct();
         $this->load->model('boardmodel');
         $this->load->model('topicmodel');
+		$this->load->model('usermodel');
 		$this->load->library('form_validation');
 	}
 
