@@ -1,18 +1,21 @@
 <?php
 
 class Topic extends CI_Controller {
-    public function __construct()
-	{
+    public function __construct() {
+
 		parent::__construct();
 		$this->load->model('topicmodel');
 		$this->load->model('messagemodel');
 		$this->load->model('usermodel');
 		$this->load->library('form_validation');
+
 	}
 
 	public function index($get_topic) {
+
 		$topic = $this->topicmodel->getTopics(array('topic_url' => $get_topic));
 		if (!empty($topic)) {
+
 			$topic_id = $topic[0]->topic_id;
 			$messages = $this->messagemodel->getMessages(array('topic_id' => $topic_id));
 			$this->load->view('topic', array(
@@ -24,13 +27,16 @@ class Topic extends CI_Controller {
 				'board_id' => $topic[0]->board_id,
 				'messages' => $messages
 			));
+
 		} else {
 			show_404();
 		}
 	}
 
 	public function insert() {
+
 		if ($this->input->method('REQUEST_METHOD') == 'POST') {
+
             $this->form_validation->set_rules('input_message_content', 'Mesaj', 'required|max_length[5000]');
 
             if ($this->form_validation->run() == TRUE) {
@@ -48,14 +54,19 @@ class Topic extends CI_Controller {
 				$topic_url = $this->input->post("input_topic_url");
 
 				if ($insert) {
+					
 					$this->session->set_flashdata('post_message_success', TRUE);
 					redirect(base_url('konular/' . $topic_url));
+
 				} else {
 					show_404();
 				}
+
 			} else {
+
 				$this->session->set_flashdata('post_message_error', validation_errors());
 				redirect(base_url());
+
 			}
 		}		
 	}

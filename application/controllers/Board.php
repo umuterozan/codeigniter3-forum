@@ -2,18 +2,22 @@
 
 class Board extends CI_Controller {
 
-    public function __construct()
-	{
+    public function __construct() {
+
 		parent::__construct();
         $this->load->model('boardmodel');
         $this->load->model('topicmodel');
 		$this->load->model('usermodel');
 		$this->load->library('form_validation');
+
 	}
 
-    public function index($get_board){
+    public function index($get_board) {
+		
         $board = $this->boardmodel->getAltBoards(array('board_url' => $get_board));
+
         if (!empty($board)) {
+
             $board_id = $board[0]->board_id;
             $topics = $this->topicmodel->getTopics(array('board_id' => $board_id));             
             $this->load->view('board', array(
@@ -21,13 +25,16 @@ class Board extends CI_Controller {
                 'board_name' => $board[0]->board_name,
                 'topics' => $topics
             ));
+			
         } else {
             show_404();
         }
     }
 
     public function insert() {
+
 		if ($this->input->method('REQUEST_METHOD') == 'POST') {
+
             $this->form_validation->set_rules('input_topic_name', 'Konu başlığı', 'required');
             $this->form_validation->set_rules('input_topic_message', 'Mesaj', 'required|max_length[5000]');
 
@@ -55,14 +62,19 @@ class Board extends CI_Controller {
 				));
 
 				if ($topic_insert && $message_insert) {
+
 					$this->session->set_flashdata('post_topic_success', TRUE);
 					redirect(base_url('konular/' . $topic_url));
+
 				} else {
 					show_404();
 				}
+
 			} else {
+
 				$this->session->set_flashdata('post_topic_error', validation_errors());
 				redirect(base_url());
+				
 			}
 		}		
 	}
