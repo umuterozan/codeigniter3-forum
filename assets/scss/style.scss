@@ -983,8 +983,16 @@ section {
         span {
             color: #141414;
         }
+
+        .admin-panel-button {
+            margin-top: 20px;
+            button {
+                width: 100%;
+            }
+        }
     }
 }
+
 
 footer {
     background: #152c68;

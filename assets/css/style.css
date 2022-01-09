@@ -1153,6 +1153,14 @@ section .far {
   color: #141414;
 }
 
+.account-detail .account-detail-content .admin-panel-button {
+  margin-top: 20px;
+}
+
+.account-detail .account-detail-content .admin-panel-button button {
+  width: 100%;
+}
+
 footer {
   background: #152c68;
   padding: 6.5px 0;

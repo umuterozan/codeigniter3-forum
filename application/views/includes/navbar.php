@@ -24,7 +24,12 @@
                                                     <b>Kayıt tarihi: </b><span><?=strftime('%d %b %Y', strtotime($value->user_register_date));?></span><br>
                                                     <b>Açılan konular: </b><span><?=$this->usermodel->getUserTopicsCountRow($value->user_id);?></span><br>
                                                     <b>Yazılan mesajlar: </b><span><?=$this->usermodel->getUserMessagesCountRow($value->user_id);?></span>
-                                                <?php endforeach;?>                                
+                                                    <?php if($value->user_id == 1) : ?>
+                                                        <div class="admin-panel-button">
+                                                            <button type="button" class="btn btn-primary" onclick="location.href = '<?=base_url('adminpanel')?>'">Admin Panel</button>
+                                                        </div>
+                                                    <?php endif;?>
+                                                <?php endforeach;?>                     
                                             </div>
                                         </div>
                                     </div>
