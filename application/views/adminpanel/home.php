@@ -21,7 +21,7 @@
                                 <span class="sr-only">Toggle Menu</span>
                             </button>
                         </div>
-                        <h1><a href="<?=base_url()?>" class="logo">Teknoloji Forumu</a></h1>
+                        <h1><a href="<?=base_url()?>" class="logo"><img src="<?=base_url('assets/img/favicon.png')?>" alt="favicon" width="18"> Teknoloji Forumu</a></h1>
                         <ul class="list-unstyled components mb-5">
                             <li class="active">
                                 <a href="<?=base_url('adminpanel')?>"><span class="fa fa-home mr-3"></span> Anasayfa</a>
@@ -45,9 +45,22 @@
                     </nav>
                     <!-- Page Content  -->
                     <div id="content" class="p-4 p-md-5 pt-5">
-                        <h2 class="mt-4 mb-4">Teknoloji Forumu</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <center><div class="admin-panel-home-logo">
+                            <img src="<?=base_url('assets/img/logo.png')?>" alt="Teknoloji Forumu Logo">
+                        </div>
+                        <h1 class="mt-5">Teknoloji Forumu Admin Paneli</h1></center>      
+                        <div class="card text-center mt-5">
+                            <div class="card-header">
+                                <?=$value->user_email?>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Hoş geldin, <?=$value->user_name?></h5>
+                                <p class="card-text">Soldaki menüyü kullanarak yönetici işlemlerini yapabilirsin.</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Admin Paneli v1.0
+                            </div>
+                        </div>
                     </div>
                 </div>                
             <?php else : ?>

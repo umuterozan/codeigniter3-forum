@@ -8324,3 +8324,15 @@ a[data-toggle="collapse"] {
 
 .subscribe-form .form-control {
   background: #4897fc; }
+
+/* ------------------- */
+
+.admin-panel-home-logo {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #1f419b;  
+  text-align: center;
+  width: 350px;
+  border-radius: 10px;
+}
