@@ -41,7 +41,7 @@
                         <?php else : ?>
                             <li>
                                 <!-- Giriş Yap Modal Trigger -->
-                                <a href="" style="border-right: 1px solid #1d3a87;" data-bs-toggle="modal" data-bs-target="#giris_yapModal">Giriş Yap</a>                                                               
+                                <a href="" style="border-right: 1px solid #1d3a87;" id="giris_yap_click_trigger" data-bs-toggle="modal" data-bs-target="#giris_yapModal">Giriş Yap</a>                                                               
                             </li>
                             <li>
                                 <!--Kayıt Ol Modal Trigger -->
