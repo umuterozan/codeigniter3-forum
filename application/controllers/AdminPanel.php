@@ -6,9 +6,7 @@ class AdminPanel extends CI_Controller {
 
         parent::__construct();
         $this->load->model('usermodel');
-        $this->load->model('boardmodel');
-        $this->load->model('topicmodel');
-        $this->load->model('messagemodel');
+        $this->load->model('adminmodel');
 
     }
 
@@ -20,19 +18,38 @@ class AdminPanel extends CI_Controller {
 
     public function users() {
 
-        $this->load->view('adminpanel/users');
+        $users_data = $this->adminmodel->getAllUsers();
+
+        $view_data_users = array(
+            "users" => $users_data
+        );
+
+        $this->load->view('adminpanel/users', $view_data_users);
 
     }
 
     public function topics() {
 
-        $this->load->view('adminpanel/topics');
+        $topics_data = $this->adminmodel->getAllTopics();
+
+        $view_data_topics = array(
+            "topics" => $topics_data
+        );
+
+        $this->load->view('adminpanel/topics', $view_data_topics);
 
     }
 
     public function messages() {
 
-        $this->load->view('adminpanel/messages');
+        $messages_data = $this->adminmodel->getAllMessages();
+
+        $view_data_messages = array(
+            "messages" => $messages_data
+        );
+
+        $this->load->view('adminpanel/messages', $view_data_messages);
+        
     }
 
     public function tickets() {

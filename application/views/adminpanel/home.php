@@ -7,7 +7,7 @@
     <title>Admin Panel</title>
     <link rel="icon" type="image/png" href="<?=base_url('assets/img/favicon.png');?>" sizes="32x32" />
     <?php $this->load->view('includes/style');?>
-    <link rel="stylesheet" href="<?=base_url('assets/css/adminpanel.css')?>">
+    <?php $this->load->view('includes/adminstyle');?>
 </head>
 <body>
     <?php if($this->session->userdata('login')) : ?>
@@ -51,14 +51,14 @@
                         <h1 class="mt-5">Teknoloji Forumu Admin Paneli</h1></center>      
                         <div class="card text-center mt-5">
                             <div class="card-header">
-                                <?=$value->user_email?>
+                                Admin Paneli v1.0
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title">Hoş geldin, <?=$value->user_name?></h5>
                                 <p class="card-text">Soldaki menüyü kullanarak yönetici işlemlerini yapabilirsin.</p>
                             </div>
                             <div class="card-footer text-muted">
-                                Admin Paneli v1.0
+                                Community platform by teknoloji ® © 2021-2022 Teknoloji Forumu
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,6 @@
         </script>
     <?php endif; ?>
     <?php $this->load->view('includes/script');?>
-    <script src="<?=base_url('assets/js/popper.js')?>"></script>
-    <script src="<?=base_url('assets/js/adminpanel.js')?>"></script>
+    <?php $this->load->view('includes/adminscript');?>
 </body>
 </html>
