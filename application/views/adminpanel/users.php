@@ -63,9 +63,7 @@
                                         <td><?=$user->user_name;?></td>
                                         <td><?=$user->user_email;?></td>
                                         <td><?=strftime('%d %b %Y - %H:%M', strtotime($user->user_register_date));?></td>
-                                        <td>
-                                            <a href="#" class="btn btn-danger" style="width: 100%;">Sil</a>                                          
-                                        </td>
+                                        <td><a href="#" class="btn btn-danger" style="width: 100%;">Sil</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
