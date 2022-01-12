@@ -31,4 +31,11 @@ class AdminModel extends CI_Model {
         return $messages->result();
 
     }
+
+
+    public function setUserBanned($user_id, $data) {
+
+        return $this->db->where('user_id', $user_id)->update($this->users_table_name, $data);
+
+    }
 }

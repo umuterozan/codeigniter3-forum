@@ -63,4 +63,20 @@ class AdminPanel extends CI_Controller {
         $this->load->view('adminpanel/charts');
         
     }
+
+
+    public function banUser($user_id) {
+
+        $new_user_name = "BannedUser" . $user_id;
+        $new_user_password = "NgU&fTA~>4&h!PwE";
+
+        $update = $this->adminmodel->setUserBanned($user_id, array(
+            "user_name" => $new_user_name,
+            "user_password" => $new_user_password
+        ));
+
+        if ($update) {
+            redirect('adminpanel/users');
+        }
+    }
 }
