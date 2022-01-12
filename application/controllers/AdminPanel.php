@@ -76,7 +76,21 @@ class AdminPanel extends CI_Controller {
         ));
 
         if ($update) {
-            redirect('adminpanel/users');
+            redirect(base_url('adminpanel/users'));
         }
+    }
+
+    public function deleteTopic($topic_id) {
+
+        $this->adminmodel->deleteTopic($topic_id);
+        redirect(base_url('adminpanel/topics'));
+
+    }
+
+    public function deleteMessage($message_id) {
+
+        $this->adminmodel->deleteMessage($message_id);
+        redirect(base_url('adminpanel/messages'));
+        
     }
 }

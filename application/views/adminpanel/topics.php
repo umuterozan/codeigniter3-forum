@@ -65,7 +65,7 @@
                                         <td><a href="<?=base_url('forumlar/' . $topic->board_url);?>" target="_blank"><?=$topic->board_name;?></a></td>
                                         <td><?=$topic->user_name;?></td>
                                         <td><?=strftime('%d %b %Y - %H:%M', strtotime($topic->topic_created_date));?></td>
-                                        <td><a href="#" class="btn btn-danger" style="width: 100%;">Sil</a></td>
+                                        <td><a href="<?=base_url("adminpanel/deleteTopic/$topic->topic_id")?>" class="btn btn-danger" style="width: 100%;">Sil</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

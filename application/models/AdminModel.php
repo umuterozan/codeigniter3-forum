@@ -38,4 +38,17 @@ class AdminModel extends CI_Model {
         return $this->db->where('user_id', $user_id)->update($this->users_table_name, $data);
 
     }
+
+    public function deleteTopic($topic_id) {
+        
+        $this->db->where("topic_id", $topic_id)->delete($this->messages_table_name);
+        return $this->db->where("topic_id", $topic_id)->delete($this->topics_table_name);
+
+    }
+
+    public function deleteMessage($message_id) {
+
+        return $this->db->where("message_id", $message_id)->delete($this->messages_table_name);
+        
+    }
 }

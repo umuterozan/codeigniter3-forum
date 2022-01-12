@@ -65,7 +65,7 @@
                                         <td><a href="<?=base_url('konular/' . $message->topic_url);?>" target="_blank"><?=$message->topic_name;?></a></td>
                                         <td><?=$message->user_name;?></td>
                                         <td><?=strftime('%d %b %Y - %H:%M', strtotime($message->message_created_date));?></td>
-                                        <td><a href="#" class="btn btn-danger" style="width: 100%;">Sil</a></td>
+                                        <td><a href="<?=base_url("adminpanel/deleteMessage/$message->message_id")?>" class="btn btn-danger" style="width: 100%;">Sil</a></td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
