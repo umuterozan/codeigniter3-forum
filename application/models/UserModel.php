@@ -8,6 +8,8 @@ class UserModel extends CI_Model {
 
     }
 
+    public $table_name_tickets = "tickets";
+
     public function insertUser($data) {
 
         $this->db->insert('users', $data);
@@ -42,5 +44,11 @@ class UserModel extends CI_Model {
 
         return $this->db->where(['user_id'=>$user_id])->from("messages")->count_all_results();
         
+    }
+
+    public function ticketInsert($data) {
+
+        return $this->db->insert($this->table_name_tickets, $data);
+
     }
 }

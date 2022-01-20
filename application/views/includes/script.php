@@ -3,7 +3,12 @@
 <script src="<?=base_url('assets/js/toastr.min.js')?>"></script>
 <script>
     toastr.options.progressBar = true;   
+
+    function needLogin() {        
+        toastr.warning("Bu alanı görüntüleyebilmek için giriş yapmalısınız.", "Uyarı");
+    }
 </script>
+
 <?php if($this->session->flashdata('register_success')) : ?>
     <script>
         toastr.success("Başarıyla kayıt olundu!", "Kayıt");
@@ -15,7 +20,7 @@
 <?php endif;?>
 <?php if($this->session->flashdata('register_error')) : ?>
     <script>
-        toastr.error("Lütfen girdiğiniz bilgileri kontrol edin.", "Hata")
+        toastr.error("Lütfen girdiğiniz bilgileri kontrol edin.", "Hata");
         var myModal = new bootstrap.Modal(document.getElementById("kayit_olModal"), {});
         document.onreadystatechange = function () {
             myModal.show();
@@ -29,7 +34,7 @@
 <?php endif;?>
 <?php if($this->session->flashdata('login_error')) : ?>
     <script>
-        toastr.error("Lütfen girdiğiniz bilgileri kontrol edin.", "Hata")
+        toastr.error("Lütfen girdiğiniz bilgileri kontrol edin.", "Hata");
         var myModal = new bootstrap.Modal(document.getElementById("giris_yapModal"), {});
         document.onreadystatechange = function () {
             myModal.show();
@@ -60,5 +65,20 @@
 <?php if($this->session->flashdata('post_message_error')) : ?>
     <script>     
         toastr.error('Lütfen bir şeyler yazın.', 'Hata');
+    </script>
+<?php endif;?>
+
+<?php if($this->session->flashdata('post_ticket_success')) : ?>
+    <script>        
+        toastr.success('Başarıyla talep gönderildi!', 'Forum');
+    </script>
+<?php endif;?>
+<?php if($this->session->flashdata('post_ticket_error')) : ?>
+    <script>
+        toastr.error("Lütfen girdiğiniz bilgileri kontrol edin.", "Hata");
+        var myModal = new bootstrap.Modal(document.getElementById("talep_gonderModal"), {});
+        document.onreadystatechange = function () {
+            myModal.show();
+        };
     </script>
 <?php endif;?>

@@ -17,7 +17,7 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('username', 'Kullanıcı adı', 'required|trim|min_length[3]|max_length[15]|alpha_numeric');
             $this->form_validation->set_rules('email', 'E-posta adresiniz', 'required|trim|valid_email|is_unique[users.user_email]');
             $this->form_validation->set_rules('password', 'Parola', 'required|trim|min_length[4]|max_length[22]');
-            $this->form_validation->set_rules('checkbox', 'Kullanım Koşulları ve Gizlilik Politikasını okudum, kabul ediyorum.', 'required');
+            $this->form_validation->set_rules('checkbox', 'Gizlilik Politikasını okudum, kabul ediyorum.', 'required');
 
             if ($this->form_validation->run() == TRUE) {
 
@@ -89,6 +89,47 @@ class User extends CI_Controller {
             $this->session->set_flashdata('login_logout', TRUE);
             redirect(base_url());
             
+        }
+    }
+
+    public function sendTicket() {
+
+        if ($this->input->method('REQUEST_METHOD') == 'POST') {
+
+            $this->form_validation->set_rules('input_ticket_topic', 'Konu', 'required');
+            $this->form_validation->set_rules('input_ticket_message', 'Mesaj', 'required|max_length[5000]');
+            $this->form_validation->set_rules('input_ticket_checkbox', 'Gizlilik Politikasını okudum, kabul ediyorum.', 'required');
+
+            if ($this->form_validation->run() == TRUE) {
+
+				$ticket_topic = $this->input->post("input_ticket_topic");
+				$ticket_message = $this->input->post("input_ticket_message");
+
+				$ticket_user_id = $this->session->userdata("login")['user_id'];
+				$ticket_user_name = $this->session->userdata("login")['user_name'];
+
+				$insert = $this->user->ticketInsert(array(
+					"ticket_topic_name" => $ticket_topic,
+					"ticket_message_content" => $ticket_message,
+					"ticket_user_id" => $ticket_user_id,
+                    "ticket_user_name" => $ticket_user_name
+				));
+
+				if ($insert) {
+					
+					$this->session->set_flashdata('post_ticket_success', TRUE);
+					redirect(base_url());
+
+				} else {
+					show_404();
+				}
+
+			} else {
+
+				$this->session->set_flashdata('post_ticket_error', validation_errors());
+				redirect(base_url());
+
+			}
         }
     }
 }
