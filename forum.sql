@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 07 Oca 2022, 22:23:36
+-- Üretim Zamanı: 20 Oca 2022, 19:49:42
 -- Sunucu sürümü: 10.4.21-MariaDB
 -- PHP Sürümü: 8.0.10
 
@@ -82,7 +82,31 @@ INSERT INTO `messages` (`message_id`, `message_content`, `topic_id`, `message_cr
 (4, 'lorem ipsum dolor sit', 3, '2021-12-27 14:33:34', 3),
 (5, 'lorem ipsum dolor sit2', 3, '2021-12-27 14:33:47', 3),
 (6, 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt voluptatem quisquam minus aut ratione nostrum veniam neque eum enim earum labore, laudantium aperiam molestiae commodi amet suscipit! Voluptas, temporibus repellat! 2', 1, '2022-01-03 15:29:17', 3),
-(7, 'Bilgisayarınız yavaş çalışıyorsa, panik yapmayın. 3', 9, '2022-01-03 15:30:50', 3);
+(7, 'Bilgisayarınız yavaş çalışıyorsa, panik yapmayın. 3', 9, '2022-01-03 15:30:50', 3),
+(22, '<ol><li><img class=\"image_resized\" style=\"width:47.59%;\" src=\"https://i2.milimaj.com/i/milliyet/75/0x0/5fb5057d55427f12cc5472be.jpg\"></li><li>&nbsp;</li><li>&nbsp;</li><li>&nbsp;</li><li>Deneme merhaba asdasd&nbsp;</li></ol>', 20, '2022-01-09 18:52:35', 1),
+(23, '<p>nbr</p>', 20, '2022-01-09 18:52:54', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Tablo için tablo yapısı `tickets`
+--
+
+CREATE TABLE `tickets` (
+  `ticket_id` int(11) NOT NULL,
+  `ticket_topic_name` varchar(255) NOT NULL,
+  `ticket_message_content` text NOT NULL,
+  `ticket_user_id` int(11) NOT NULL,
+  `ticket_user_name` varchar(255) NOT NULL,
+  `ticket_created_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `tickets`
+--
+
+INSERT INTO `tickets` (`ticket_id`, `ticket_topic_name`, `ticket_message_content`, `ticket_user_id`, `ticket_user_name`, `ticket_created_date`) VALUES
+(1, 'Test Talep Gönderisi', 'Test Talep Gönderisi Test Talep Gönderisi Test Talep Gönderisi Test Talep Gönderisi \r\nTest Talep Gönderisi\r\nTest Talep GönderisiTest Talep Gönderisi Test Talep Gönderisi', 1, 'Admin', '2022-01-20 18:46:14');
 
 -- --------------------------------------------------------
 
@@ -106,7 +130,8 @@ CREATE TABLE `topics` (
 INSERT INTO `topics` (`topic_id`, `topic_name`, `topic_url`, `board_id`, `topic_created_date`, `user_id`) VALUES
 (1, '14 Bilgisayar Hızlandırma ve FPS Arttırma Yöntemi', '14-bilgisayar-hizlandirma-ve-fps-arttirma-yontemi', 4, '2021-12-22 12:43:32', 3),
 (3, 'Akıllı Telefon / Tablet testi', 'asdasdasdasdasdasd', 5, '2021-12-23 11:23:50', 3),
-(9, 'test konusu 1', 'test-konusu-1', 4, '2022-01-03 15:30:11', 3);
+(9, 'test konusu 1', 'test-konusu-1', 4, '2022-01-03 15:30:11', 3),
+(20, 'Deneme Merhaba', 'deneme-merhaba', 4, '2022-01-09 18:52:35', 1);
 
 -- --------------------------------------------------------
 
@@ -127,9 +152,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `user_name`, `user_email`, `user_password`, `user_register_date`) VALUES
-(1, 'asdasdas', 'asdasd@asdasd.com', 'asdasdasdasd', '2021-12-05 18:34:11'),
-(2, 'test', 'test@test.com', 'test', '2021-12-06 13:02:40'),
-(3, 'AdminAdmin', 'test@test2.com', 'admin', '2021-12-10 11:12:13');
+(1, 'Admin', 'admin@admin.com', 'admin', '2021-12-05 18:34:11'),
+(2, 'test', 'testuser1@test.com', 'test', '2021-12-06 13:02:40'),
+(3, 'TestUser', 'testuser2@test.com', 'test2', '2021-12-10 11:12:13');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -146,6 +171,12 @@ ALTER TABLE `boards`
 --
 ALTER TABLE `messages`
   ADD PRIMARY KEY (`message_id`);
+
+--
+-- Tablo için indeksler `tickets`
+--
+ALTER TABLE `tickets`
+  ADD PRIMARY KEY (`ticket_id`);
 
 --
 -- Tablo için indeksler `topics`
@@ -173,19 +204,25 @@ ALTER TABLE `boards`
 -- Tablo için AUTO_INCREMENT değeri `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
+-- Tablo için AUTO_INCREMENT değeri `tickets`
+--
+ALTER TABLE `tickets`
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `topics`
 --
 ALTER TABLE `topics`
-  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `topic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
