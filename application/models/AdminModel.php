@@ -11,6 +11,7 @@ class AdminModel extends CI_Model {
     public $users_table_name = "users";
     public $topics_table_name = "topics";
     public $messages_table_name = "messages";
+    public $tickets_table_name = "tickets";
 
     public function getAllUsers() {
 
@@ -32,6 +33,12 @@ class AdminModel extends CI_Model {
 
     }
 
+    public function getAllTickets() {
+
+        return $this->db->get($this->tickets_table_name)->result();
+
+    }
+
 
     public function setUserBanned($user_id, $data) {
 
@@ -49,6 +56,12 @@ class AdminModel extends CI_Model {
     public function deleteMessage($message_id) {
 
         return $this->db->where("message_id", $message_id)->delete($this->messages_table_name);
+        
+    }
+
+    public function deleteTicket($ticket_id) {
+
+        return $this->db->where("ticket_id", $ticket_id)->delete($this->tickets_table_name);
         
     }
 }

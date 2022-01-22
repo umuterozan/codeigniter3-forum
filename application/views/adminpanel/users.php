@@ -46,6 +46,7 @@
                     <!-- Page Content  -->
                     <div id="content" class="p-4 p-md-5 pt-5 mt-4">       
                         <h2 class="mb-4">Kullanıcılar</h2>
+                        <hr>
                         <table class="table table-bordered table-striped table-hover" id="adminDataTables">
                             <thead>
                                 <tr>

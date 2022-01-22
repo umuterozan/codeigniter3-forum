@@ -54,7 +54,13 @@ class AdminPanel extends CI_Controller {
 
     public function tickets() {
 
-        $this->load->view('adminpanel/tickets');
+        $tickets_data = $this->adminmodel->getAllTickets();
+
+        $view_data_tickets = array(
+            "tickets" => $tickets_data
+        );
+
+        $this->load->view('adminpanel/tickets', $view_data_tickets);
 
     }
 
@@ -92,5 +98,12 @@ class AdminPanel extends CI_Controller {
         $this->adminmodel->deleteMessage($message_id);
         redirect(base_url('adminpanel/messages'));
         
+    }
+
+    public function deleteTicket($ticket_id) {
+
+        $this->adminmodel->deleteTicket($ticket_id);
+        redirect(base_url('adminpanel/tickets'));
+
     }
 }

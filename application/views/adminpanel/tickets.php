@@ -44,23 +44,35 @@
                         </ul>
                     </nav>
                     <!-- Page Content  -->
-                    <div id="content" class="p-4 p-md-5 pt-5">
-                        <center><div class="admin-panel-home-logo">
-                            <img src="<?=base_url('assets/img/logo.png')?>" alt="Teknoloji Forumu Logo">
-                        </div>
-                        <h1 class="mt-5">Teknoloji Forumu Admin Paneli</h1></center>      
-                        <div class="card text-center mt-5">
-                            <div class="card-header">
-                                Admin Paneli v1.0
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Hoş geldin, <?=$value->user_name?></h5>
-                                <p class="card-text">Soldaki menüyü kullanarak yönetici işlemlerini yapabilirsin.</p>
-                            </div>
-                            <div class="card-footer text-muted">
-                                Community platform by teknoloji ® © 2021-2022 Teknoloji Forumu
-                            </div>
-                        </div>
+                    <div id="content" class="p-4 p-md-5 pt-5 mt-4">
+                        <h2 class="mb-4">Talepler</h2>
+                        <hr>
+                        <table class="table table-bordered table-striped table-hover" id="adminDataTables">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Konu Adı</th>
+                                    <th scope="col">Mesaj İçeriği</th>
+                                    <th scope="col">Kullanıcı ID</th>
+                                    <th scope="col">Kullanıcı Adı</th>
+                                    <th scope="col">Oluşturulma Tarihi</th>
+                                    <th scope="col" style="width: 50px; text-align: center;">İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($tickets as $ticket) : ?>
+                                    <tr>
+                                        <th scope="row"><?=$ticket->ticket_id;?></th>
+                                        <td><?=$ticket->ticket_topic_name;?></td>
+                                        <td><?=$ticket->ticket_message_content;?></td>
+                                        <td><?=$ticket->ticket_user_id;?></td>
+                                        <td><?=$ticket->ticket_user_name;?></td>
+                                        <td><?=strftime('%d %b %Y - %H:%M', strtotime($ticket->ticket_created_date));?></td>
+                                        <td><a href="<?=base_url("adminpanel/deleteTicket/$ticket->ticket_id");?>" class="btn btn-danger" style="width: 100%;">Sil</a></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>                
             <?php else : ?>
@@ -78,5 +90,6 @@
     <?php endif; ?>
     <?php $this->load->view('includes/script');?>
     <?php $this->load->view('includes/adminscript');?>
+    <script src="<?=base_url('assets/js/rundatatables.js');?>"></script>
 </body>
 </html>

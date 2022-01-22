@@ -46,12 +46,13 @@
                     <!-- Page Content  -->
                     <div id="content" class="p-4 p-md-5 pt-5 mt-4">
                         <h2 class="mb-4">Mesajlar</h2>
+                        <hr>
                         <table class="table table-bordered table-striped table-hover" id="adminDataTables">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Mesaj</th>
-                                    <th scope="col">Konu</th>
+                                    <th scope="col">Mesaj İçeriği</th>
+                                    <th scope="col">Konu Adı</th>
                                     <th scope="col">Oluşturan</th>
                                     <th scope="col">Oluşturulma Tarihi</th>
                                     <th scope="col" style="width: 50px; text-align: center;">İşlemler</th>
