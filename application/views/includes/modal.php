@@ -70,7 +70,7 @@
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="kayit_olCheck" name="checkbox" required>
-                        <label class="form-check-label" for="kayit_olCheck"><a href="#">Gizlilik Politikasını</a> okudum, kabul ediyorum.</label>
+                        <label class="form-check-label" for="kayit_olCheck"><a href="#">Kurallar</a> ve <a href="#">Gizlilik Politikasını</a> okudum, kabul ediyorum.</label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
@@ -109,7 +109,7 @@
                     </div>
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="talep_gonderCheck" name="input_ticket_checkbox" required>
-                        <label class="form-check-label" for="talep_gonderCheck"><a href="#">Gizlilik Politikasını</a> okudum, kabul ediyorum.</label>
+                        <label class="form-check-label" for="talep_gonderCheck"><a href="#">Kurallar</a> ve <a href="#">Gizlilik Politikasını</a> okudum, kabul ediyorum.</label>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>

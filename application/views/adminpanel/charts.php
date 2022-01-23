@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Panel</title>
+    <title>Admin Panel | Teknoloji Forumu</title>
     <link rel="icon" type="image/png" href="<?=base_url('assets/img/favicon.png');?>" sizes="32x32" />
     <?php $this->load->view('includes/style');?>
     <?php $this->load->view('includes/adminstyle');?>
@@ -48,32 +48,32 @@
                         <h2 class="mb-4">Grafikler</h2>
                         <hr>
                         <div class="d-flex justify-content-evenly mb-4 mt-4">
-                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Kullanıcılar</div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-users fa-3x"></i></h5>
-                                    <p class="card-text"><?=$this->adminmodel->getUsersCountRow();?></p>
+                            <div class="card text-white bg-primary mb-3 chart-card" style="max-width: 18rem;">
+                                <div class="card-header chart-card-header">Kullanıcılar</div>
+                                <div class="card-body chart-card-body">
+                                    <h5 class="card-title chart-card-title"><i class="fas fa-users fa-3x"></i></h5>
+                                    <p class="card-text chart-card-text"><?=$this->adminmodel->getUsersCountRow();?></p>
                                 </div>
                             </div>    
-                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Konular</div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-folder fa-3x"></i></h5>
-                                    <p class="card-text"><?=$this->adminmodel->getTopicsCountRow();?></p>
+                            <div class="card text-white bg-secondary mb-3 chart-card" style="max-width: 18rem;">
+                                <div class="card-header chart-card-header">Konular</div>
+                                <div class="card-body chart-card-body">
+                                    <h5 class="card-title chart-card-title"><i class="fas fa-folder fa-3x"></i></h5>
+                                    <p class="card-text chart-card-text"><?=$this->adminmodel->getTopicsCountRow();?></p>
                                 </div>
                             </div>
-                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Mesajlar</div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-sticky-note fa-3x"></i></h5>
-                                    <p class="card-text"><?=$this->adminmodel->getMessagesCountRow();?></p>
+                            <div class="card text-white bg-success mb-3 chart-card" style="max-width: 18rem;">
+                                <div class="card-header chart-card-header">Mesajlar</div>
+                                <div class="card-body chart-card-body">
+                                    <h5 class="card-title chart-card-title"><i class="fas fa-sticky-note fa-3x"></i></h5>
+                                    <p class="card-text chart-card-text"><?=$this->adminmodel->getMessagesCountRow();?></p>
                                 </div>
                             </div>
-                            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
-                                <div class="card-header">Talepler</div>
-                                <div class="card-body">
-                                    <h5 class="card-title"><i class="fas fa-paper-plane fa-3x"></i></h5>
-                                    <p class="card-text"><?=$this->adminmodel->getTicketsCountRow();?></p>
+                            <div class="card text-white bg-info mb-3 chart-card" style="max-width: 18rem;">
+                                <div class="card-header chart-card-header">Talepler</div>
+                                <div class="card-body chart-card-body">
+                                    <h5 class="card-title chart-card-title"><i class="fas fa-paper-plane fa-3x"></i></h5>
+                                    <p class="card-text chart-card-text"><?=$this->adminmodel->getTicketsCountRow();?></p>
                                 </div>
                             </div>       
                         </div>    

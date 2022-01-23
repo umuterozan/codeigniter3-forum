@@ -8345,22 +8345,22 @@ a {
   width: 30vw;
 }
 
-.card {
+.chart-card {
   width: 500px;
 }
 
-.card-header {
+.chart-card-header {
   font-size: 25px;
 }
 
-.card-title {
+.chart-card-title {
   color: #fff;
 }
 
-.card-body {
+.chart-card-body {
   text-align: center;
 }
 
-.card-text {
+.chart-card-text {
   font-size: 50px;
 }

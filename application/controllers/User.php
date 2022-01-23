@@ -17,7 +17,7 @@ class User extends CI_Controller {
             $this->form_validation->set_rules('username', 'Kullanıcı adı', 'required|trim|min_length[3]|max_length[15]|alpha_numeric');
             $this->form_validation->set_rules('email', 'E-posta adresiniz', 'required|trim|valid_email|is_unique[users.user_email]');
             $this->form_validation->set_rules('password', 'Parola', 'required|trim|min_length[4]|max_length[22]');
-            $this->form_validation->set_rules('checkbox', 'Gizlilik Politikasını okudum, kabul ediyorum.', 'required');
+            $this->form_validation->set_rules('checkbox', 'Kurallar ve Gizlilik Politikasını okudum, kabul ediyorum', 'required');
 
             if ($this->form_validation->run() == TRUE) {
 
@@ -98,7 +98,7 @@ class User extends CI_Controller {
 
             $this->form_validation->set_rules('input_ticket_topic', 'Konu', 'required');
             $this->form_validation->set_rules('input_ticket_message', 'Mesaj', 'required|max_length[5000]');
-            $this->form_validation->set_rules('input_ticket_checkbox', 'Gizlilik Politikasını okudum, kabul ediyorum.', 'required');
+            $this->form_validation->set_rules('input_ticket_checkbox', 'Kurallar ve Gizlilik Politikasını okudum, kabul ediyorum', 'required');
 
             if ($this->form_validation->run() == TRUE) {
 
