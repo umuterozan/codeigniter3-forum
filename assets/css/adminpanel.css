@@ -8340,3 +8340,27 @@ a[data-toggle="collapse"] {
 a {
   color: #212529;
 }
+
+.chart-container {
+  width: 30vw;
+}
+
+.card {
+  width: 500px;
+}
+
+.card-header {
+  font-size: 25px;
+}
+
+.card-title {
+  color: #fff;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-text {
+  font-size: 50px;
+}

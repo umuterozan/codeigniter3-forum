@@ -44,23 +44,67 @@
                         </ul>
                     </nav>
                     <!-- Page Content  -->
-                    <div id="content" class="p-4 p-md-5 pt-5">
-                        <center><div class="admin-panel-home-logo">
-                            <img src="<?=base_url('assets/img/logo.png')?>" alt="Teknoloji Forumu Logo">
-                        </div>
-                        <h1 class="mt-5">Teknoloji Forumu Admin Paneli</h1></center>      
-                        <div class="card text-center mt-5">
-                            <div class="card-header">
-                                Admin Paneli v1.0
+                    <div id="content" class="p-4 p-md-5 pt-5 mt-4">
+                        <h2 class="mb-4">Grafikler</h2>
+                        <hr>
+                        <div class="d-flex justify-content-evenly mb-4 mt-4">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Kullanıcılar</div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-users fa-3x"></i></h5>
+                                    <p class="card-text"><?=$this->adminmodel->getUsersCountRow();?></p>
+                                </div>
+                            </div>    
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Konular</div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-folder fa-3x"></i></h5>
+                                    <p class="card-text"><?=$this->adminmodel->getTopicsCountRow();?></p>
+                                </div>
                             </div>
-                            <div class="card-body">
-                                <h5 class="card-title">Hoş geldin, <?=$value->user_name?></h5>
-                                <p class="card-text">Soldaki menüyü kullanarak yönetici işlemlerini yapabilirsin.</p>
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Mesajlar</div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-sticky-note fa-3x"></i></h5>
+                                    <p class="card-text"><?=$this->adminmodel->getMessagesCountRow();?></p>
+                                </div>
                             </div>
-                            <div class="card-footer text-muted">
-                                Community platform by teknoloji ® © 2021-2022 Teknoloji Forumu
-                            </div>
-                        </div>
+                            <div class="card text-white bg-info mb-3" style="max-width: 18rem;">
+                                <div class="card-header">Talepler</div>
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fas fa-paper-plane fa-3x"></i></h5>
+                                    <p class="card-text"><?=$this->adminmodel->getTicketsCountRow();?></p>
+                                </div>
+                            </div>       
+                        </div>    
+                        <center><div class="chart-container">
+                            <canvas id="chart"></canvas>
+                        </div></center>
+                        <script>
+                            const ctx = document.getElementById('chart').getContext('2d');                                                       
+                            const chart = new Chart(ctx, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: ['Kullanıcılar', 'Konular', 'Mesajlar', 'Talepler'],
+                                    datasets: [{
+                                        label: 'Forum Veritabanı',
+                                        data: [
+                                            <?=$this->adminmodel->getUsersCountRow();?>, 
+                                            <?=$this->adminmodel->getTopicsCountRow();?>, 
+                                            <?=$this->adminmodel->getMessagesCountRow();?>, 
+                                            <?=$this->adminmodel->getTicketsCountRow();?>
+                                        ],
+                                        backgroundColor: [
+                                            'rgb(31, 65, 155)',
+                                            'rgb(128, 0, 0)',
+                                            'rgb(210, 105, 30)',
+                                            'rgb(100, 149, 237)'
+                                        ],
+                                        hoverOffset: 4,
+                                    }]
+                                }
+                            });
+                        </script>
                     </div>
                 </div>                
             <?php else : ?>

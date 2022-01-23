@@ -64,4 +64,28 @@ class AdminModel extends CI_Model {
         return $this->db->where("ticket_id", $ticket_id)->delete($this->tickets_table_name);
         
     }
+
+    public function getUsersCountRow() {
+
+        return $this->db->select('count(*)')->from('users')->count_all_results();
+
+    }
+
+    public function getTopicsCountRow() {
+
+        return $this->db->select('count(*)')->from('topics')->count_all_results();
+
+    }
+
+    public function getMessagesCountRow() {
+        
+        return $this->db->select('count(*)')->from('messages')->count_all_results();
+
+    }
+
+    public function getTicketsCountRow() {
+
+        return $this->db->select('count(*)')->from('tickets')->count_all_results();
+        
+    }
 }
