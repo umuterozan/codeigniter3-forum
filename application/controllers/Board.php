@@ -42,7 +42,7 @@ class Board extends CI_Controller {
 
 				$topic_name = $this->input->post("input_topic_name");
 				$topic_board_id = $this->input->post("input_board_id");
-				$topic_url = url_title($topic_name, '-', TRUE);
+				$topic_url = url_title(replace_tr($topic_name), '-', TRUE);
 				$topic_user_id = $this->session->userdata("login")['user_id'];
 				$topic_message = $this->input->post("input_topic_message");
 

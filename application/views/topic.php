@@ -52,7 +52,7 @@
                                                         <div itemscope itemtype="https://schema.org/Person" class="message-user">
                                                             <div class="message-avatar">
                                                                 <div class="message-avatar-wrapper">
-                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e"><span class="avatar-u134-m" role="img" aria-label="Teknonely (APK Meydanı)"><?=strtoupper($value->user_name[0]);?></span></a>
+                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e"><span><?=strtoupper($value->user_name[0]);?></span></a>
                                                                 </div>
                                                             </div>
                                                             <div class="message-userDetails">
@@ -109,7 +109,7 @@
                                                         <div itemscope itemtype="https://schema.org/Person" class="message-user">
                                                             <div class="message-avatar">
                                                                 <div class="message-avatar-wrapper">
-                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span>A</span></a>
+                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span><?=strtoupper($this->session->userdata('login')['user_name'][0]);?></span></a>
                                                                 </div>
                                                             </div>                                                        
                                                             <span class="message-userArrow"></span>
