@@ -73,7 +73,7 @@ header .header-container a {
 }
 
 section {
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 199px);
 }
 
 section h3 {

@@ -9,11 +9,11 @@
                     <?php if($this->session->has_userdata('login')) : ?>
                         <a href="" data-bs-toggle="modal" data-bs-target="#talep_gonderModal">İletişim</a>
                     <?php else : ?>
-                        <a href="" data-bs-toggle="modal" data-bs-target="#giris_yapModal" onclick="return needLogin()">İletişim</a>
+                        <a href="" data-bs-toggle="modal" data-bs-target="#giris_yapModal" onclick="needLogin()">İletişim</a>
                     <?php endif;?>
-                    <a href="">Kurallar</a>
-                    <a href="">Gizlilik politikası</a>
-                    <a href="">Yardım</a>
+                    <a href="<?=base_url('help/terms_rules')?>">Kurallar</a>
+                    <a href="<?=base_url('help/privacy_policy')?>">Gizlilik Politikası</a>
+                    <a href="<?=base_url('help')?>">Yardım</a>
                     <a href="<?=base_url()?>">Anasayfa</a>
                 </div>
             </div>

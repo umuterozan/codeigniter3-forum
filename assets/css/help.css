@@ -1,0 +1,152 @@
+.p-body-main {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin-bottom: auto;
+    min-height: 1px;
+}
+
+.p-body-sideNavCol {
+    width: 250px;
+}
+
+.p-body-sideNavCol, .p-body-contentCol {
+    display: table-column;
+}
+
+.p-body-sideNav {
+    display: table-cell;
+    vertical-align: top;
+    width: 250px;
+}
+
+.p-body-content>:first-child, .p-body-pageContent>:first-child, .p-body-sideNav>:first-child, .p-body-sideNavContent>:first-child {
+    margin-top: 0;
+}
+
+.p-body-content>:last-child, .p-body-pageContent>:last-child, .p-body-sideNav>:last-child, .p-body-sideNavContent>:last-child {
+    margin-bottom: 0;
+}
+
+.block-container {
+    color: #141414;
+    background: #fefefe;
+    border-width: 1px;
+    border-style: solid;
+    border-top-color: #dfdfdf;
+    border-right-color: #d8d8d8;
+    border-bottom-color: #cbcbcb;
+    border-left-color: #d8d8d8;
+    border-radius: 4px;
+}
+
+.block-header {
+    background: #1f419b;
+    color: #fff;
+}
+
+.block-header {
+    padding: 6px 10px;
+    margin: 0;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 20px;
+    border-bottom: 1px solid #dfdfdf;
+}
+
+.block-header:after {
+    clear: both;
+}
+
+.block-header:before, .block-header:after {
+    content: " ";
+    display: table;
+}
+
+.block-body {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.blockLink {
+    display: block;
+    padding: 6px 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a {
+    color: #2577b1;
+}
+
+.p-body-main--withSideNav .p-body-content {
+    padding-left: 10px;
+}
+
+.p-body-content {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.block-row.block-row--seperated {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.block-row {
+    margin: 0;
+    padding: 6px 10px;
+}
+
+.block-row:after {
+    clear: both;
+}
+
+.block-row:before, .block-row:after {
+    content: " ";
+    display: table;
+}
+
+.block-textHeader:first-child {
+    margin-top: 0;
+}
+
+.block-textHeader {
+    margin: 3px 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 17px;
+    color: #47a7eb;
+}
+
+.block-textHeader:before, .block-textHeader:after {
+    content: " ";
+    display: table;
+}
+
+.block-textHeader a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.block-row.block-row--seperated+.block-row {
+    border-top: 1px solid #dfdfdf;
+}
+
+.block-textHeader a:hover {
+    text-decoration: underline;
+}
+
+.block-body a:hover {
+    background: #edf6fd;
+    text-decoration: inherit;
+    color: #1f419b;
+    transition: all 0.1s ease 0s;
+}
+
+.blockLink.is-selected {
+    font-weight: 700;
+    border-left: 3px solid #47a7eb;
+    padding-left: 7px;
+}
