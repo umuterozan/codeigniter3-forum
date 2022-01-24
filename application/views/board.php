@@ -22,7 +22,7 @@
                             <div class="structItem">
                                 <div class="structItem-cell structItem-cell--icon">
                                     <div class="structItem-iconContainer">
-                                        <a href="#" class="avatar avatar--s avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
+                                        <a href="" class="avatar avatar--s avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
                                             <span class="avatar-u134-s" role="img"><?=strtoupper($value->user_name[0]);?></span> 
                                         </a>
                                     </div>
@@ -34,7 +34,7 @@
                                     <div class="structItem-minor">
                                         <ul class="structItem-parts">
                                             <li>
-                                                <a href="#" class="username"><?=$value->user_name;?><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></a>
+                                                <a href="" class="username"><?=$value->user_name;?><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></a>
                                             </li>
                                             <li class="structItem-startDate">
                                                 <a href="<?=base_url('konular/' . $value->topic_url);?>"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
@@ -48,7 +48,7 @@
                                             Cevaplar:
                                         </dt>
                                         <dd>                                            
-                                                <?=$this->topicmodel->getMessagesCountRow($value->topic_id);?>
+                                            <?=$this->topicmodel->getMessagesCountRow($value->topic_id);?>
                                         </dd>
                                     </dl>
                                     <dl class="pairs pairs--justified structItem-minor">
@@ -63,12 +63,12 @@
                                 <div class="structItem-cell structItem-cell--latest">
                                     <a href="<?=base_url('konular/' . $value->topic_url);?>"><time class="structItem-latestDate u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time></a>
                                     <div class="structItem-minor">
-                                        <a href="#" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
+                                        <a href="" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
                                     </div>
                                 </div>
                                 <div class="structItem-cell structItem-cell--icon structItem-cell--iconEnd">
                                     <div class="structItem-iconContainer">
-                                        <a href="#" class="avatar avatar--xxs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
+                                        <a href="" class="avatar avatar--xxs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
                                             <span class="avatar-u134-s" role="img" style="font-size: 14px;"><?=strtoupper($value->user_name[0]);?></span> 
                                         </a>
                                     </div>

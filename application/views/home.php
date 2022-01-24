@@ -48,7 +48,7 @@
                                     </div>
                                     <div class="node-extra">
                                         <div class="node-extra-icon">
-                                            <a href="#" class="avatar avatar--xs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
+                                            <a href="" class="avatar avatar--xs avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e">
                                                 <span><?=strtoupper($value->user_name[0]);?></span> 
                                             </a>
                                         </div>
@@ -58,7 +58,7 @@
                                         <div class="node-extra-row">
                                             <ul class="listInline">
                                                 <li><time class="node-extra-date u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($value->topic_created_date));?></time><i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;"></i></li>
-                                                <li class="node-extra-user"><a href="#" class="username"><?=$value->user_name?></a></li>
+                                                <li class="node-extra-user"><a href="" class="username"><?=$value->user_name?></a></li>
                                             </ul>
                                         </div>
                                     </div>

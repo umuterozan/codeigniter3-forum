@@ -23,13 +23,13 @@
                             <li>
                                 <i class="fa--xf far fa-user"></i>
                                 <span class="u-srOnly"></span>
-                                <a href="#" class="username  u-concealed" dir="auto"><?=$user_name;?></a>
+                                <a href="" class="username  u-concealed" dir="auto"><?=$user_name;?></a>
                             </li>
                             <li>
                                 <i class="fas fa-circle" style="font-size: 3px;position: relative;bottom: 3px;left: 3px;margin-right: 3px;color: #8c8c8c;"></i>
                                 <i class="fa--xf far fa-clock"></i>
                                 <span class="u-srOnly"></span>
-                                <a href="#" class="u-concealed"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($topic_created_date));?></time></a>
+                                <a href="" class="u-concealed"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y', strtotime($topic_created_date));?></time></a>
                             </li>
                         </ul>
                     </div>
@@ -52,12 +52,12 @@
                                                         <div itemscope itemtype="https://schema.org/Person" class="message-user">
                                                             <div class="message-avatar">
                                                                 <div class="message-avatar-wrapper">
-                                                                    <a href="#" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e"><span class="avatar-u134-m" role="img" aria-label="Teknonely (APK Meydanı)"><?=strtoupper($value->user_name[0]);?></span></a>
+                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #ebebad; color: #b8b82e"><span class="avatar-u134-m" role="img" aria-label="Teknonely (APK Meydanı)"><?=strtoupper($value->user_name[0]);?></span></a>
                                                                 </div>
                                                             </div>
                                                             <div class="message-userDetails">
                                                                 <h4 class="message-name">
-                                                                    <a href="#" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
+                                                                    <a href="" class="username" dir="auto" itemprop="name"><?=$value->user_name;?></a>
                                                                 </h4>
                                                             </div>
                                                             <span class="message-userArrow"></span>
@@ -68,7 +68,7 @@
                                                             <div class="message-attribution message-attribution--split">
                                                                 <ul class="message-attribution-main listInline">
                                                                     <li class="u-concealed">
-                                                                        <a href="#"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y - %H:%M', strtotime($value->message_created_date));?></time></a>
+                                                                        <a href="#topic=<?=$value->topic_id;?>.msg=<?=$value->message_id;?>"><time class="u-dt" dir="auto"><?=strftime('%d %b %Y - %H:%M', strtotime($value->message_created_date));?></time></a>
                                                                     </li>
                                                                 </ul>
                                                             </div>
@@ -109,7 +109,7 @@
                                                         <div itemscope itemtype="https://schema.org/Person" class="message-user">
                                                             <div class="message-avatar">
                                                                 <div class="message-avatar-wrapper">
-                                                                    <a href="#" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span>A</span></a>
+                                                                    <a href="" class="avatar avatar--m avatar--default avatar--default--dynamic" style="background-color: #adadeb; color: #2e2eb8;"><span>A</span></a>
                                                                 </div>
                                                             </div>                                                        
                                                             <span class="message-userArrow"></span>
