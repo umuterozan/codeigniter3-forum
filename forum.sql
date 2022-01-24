@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 24 Oca 2022, 18:27:50
+-- Üretim Zamanı: 24 Oca 2022, 18:35:19
 -- Sunucu sürümü: 10.4.21-MariaDB
 -- PHP Sürümü: 8.0.10
 
@@ -107,7 +107,11 @@ INSERT INTO `messages` (`message_id`, `message_content`, `topic_id`, `message_cr
 (59, '<p>Yararlı bilgiler için teşekkürler!</p>', 25, '2022-01-24 17:19:41', 18),
 (61, '<p><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">selam,</span><br><br><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">Açılış süresinin 4-5 dakikaya çıkması SSD\'den kaynaklanıyordur bence.</span><br><br><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">İşletim sisteminin yüklü olduğu diskin en azından %10 - %15\'inin boş olmasını tavsiye ederim.</span><br><br><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">Aşağıda yer alan kodu windows komut satırına yazarak çalıştırır mısın?</span></p><p style=\"margin-left:0px;\"><br>Code:</p><pre><code class=\"language-plaintext\">chkdsk c: /r</code></pre><p><br><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">Bu kod diskinde yer alan bad sectorleri düzeltmeye çalışacaktır.</span><br><br><span style=\"background-color:rgb(254,254,254);color:rgb(20,20,20);\">Kodu çalıştırdıktan sonra herhangi bir iyileşme gerçekleşmez ise; chkdsk c: şeklinde çalıştırarak, çıkan sonucu buradan paylaşabilir misin?</span></p>', 27, '2022-01-24 17:23:36', 1),
 (62, '<p>Monster ve Excalibur dışındaki markaları araştırabilirsin youtube\'da <a href=\"https://www.youtube.com/channel/UCz59CqPhJgCf3aUdDitjzYQ\">Cihaz.Tv </a>kanalı bu içerikler için mükemmel</p>', 28, '2022-01-24 17:24:27', 1),
-(63, '<p>Iphone</p>', 31, '2022-01-24 17:24:55', 1);
+(63, '<p>Iphone</p>', 31, '2022-01-24 17:24:55', 1),
+(64, '<p>Bilgilendirici yazı için teşekkürler!</p>', 39, '2022-01-24 17:30:51', 1),
+(65, '<p>Bilgilendirici yazı için teşekkürler!</p>', 39, '2022-01-24 17:30:54', 1),
+(66, '<p>Bilgilendirici yazı için teşekkürler!Bilgilendirici yazı için teşekkürler!Bilgilendirici yazı için teşekkürler!</p>', 36, '2022-01-24 17:31:01', 1),
+(67, '<p>Bilgilendirici yazı için teşekkürler!</p>', 36, '2022-01-24 17:31:03', 1);
 
 -- --------------------------------------------------------
 
@@ -123,6 +127,14 @@ CREATE TABLE `tickets` (
   `ticket_user_name` varchar(255) NOT NULL,
   `ticket_created_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Tablo döküm verisi `tickets`
+--
+
+INSERT INTO `tickets` (`ticket_id`, `ticket_topic_name`, `ticket_message_content`, `ticket_user_id`, `ticket_user_name`, `ticket_created_date`) VALUES
+(3, 'Test Talep Gönderisi', 'Test Talep GönderisiTest Talep Gönderisi Test Talep Gönderisi Test Talep Gönderisi Test Talep Gönderisi\r\nTest Talep GönderisiTest Talep Gönderisi\r\nTest Talep GönderisiTest Talep GönderisiTest Talep Gönderisi\r\nTest Talep Gönderisi', 12, 'Emrecan', '2022-01-24 17:28:54'),
+(4, 'Test Talep Gönderisi2', 'Test Talep Gönderisi2 Test Talep Gönderisi2Test Talep Gönderisi2\r\nTest Talep Gönderisi2Test Talep Gönderisi2Test Talep Gönderisi2\r\nTest Talep Gönderisi2\r\n\r\n\r\nTest Talep Gönderisi2', 13, 'oguzhan', '2022-01-24 17:29:10');
 
 -- --------------------------------------------------------
 
@@ -246,13 +258,13 @@ ALTER TABLE `boards`
 -- Tablo için AUTO_INCREMENT değeri `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `tickets`
 --
 ALTER TABLE `tickets`
-  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ticket_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `topics`
