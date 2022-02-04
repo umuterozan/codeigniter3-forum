@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="footer-copyright">
-                <a href="https://github.com/drepsofficial/project" target="blank">Community platform by teknoloji
+                <a href="https://github.com/creadevu/codeigniter3-forum" target="blank">Community platform by teknoloji
                     <sup>®</sup>
                     <span class="copyright">© 2021-2022 Teknoloji Forumu</span>
                 </a>
